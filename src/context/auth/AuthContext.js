@@ -1,10 +1,15 @@
 import jwtDecode from 'jwt-decode';
-import { createContext, useContext, useReducer } from 'react';
+import { createContext, useEffect, useContext, useReducer } from 'react';
 
 import * as actions from './AuthTypes';
 import AuthReducer from './AuthReducer';
 import { getJwt } from 'services/authService';
-import { clearFromStorage, getFromStorage, tokenKey } from 'utils/index';
+import {
+  clearFromStorage,
+  getFromStorage,
+  setToStorage,
+  tokenKey,
+} from 'utils/index';
 
 const token = getJwt();
 const user = getFromStorage(tokenKey);
@@ -49,6 +54,10 @@ const AuthProvider = ({ children }) => {
       payload: error,
     });
   };
+
+  useEffect(() => {
+    setToStorage(tokenKey, state.user);
+  }, [state.user]);
 
   return (
     <AuthContext.Provider value={{
