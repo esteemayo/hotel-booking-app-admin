@@ -3,12 +3,27 @@ import { createContext, useContext, useReducer } from 'react';
 
 import * as actions from './AuthTypes';
 import AuthReducer from './AuthReducer';
+import { getJwt } from 'services/authService';
+import { clearFromStorage, getFromStorage, tokenKey } from 'utils/index';
+
+const token = getJwt();
+const user = getFromStorage(tokenKey);
 
 const INITIAL_STATE = {
-  user: null,
+  user: user ?? null,
   loading: false,
   error: null,
 };
+
+if (token) {
+  const decoded = jwtDecode(token);
+  const expiryDate = Date.now();
+
+  if (expiryDate > decoded.exp * 1000) {
+    clearFromStorage();
+    INITIAL_STATE.user = null;
+  }
+}
 
 const AuthContext = createContext(INITIAL_STATE);
 
