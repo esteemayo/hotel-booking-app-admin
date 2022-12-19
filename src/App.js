@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { productInputs, userInputs } from 'formData';
+import { loginInputs, productInputs, userInputs } from 'formData';
 import { useGlobalContext } from 'context/darkmode/DarkModeContext';
 import {
   Home,
@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route path='/' element={<SharedLayout />}>
             <Route index element={<Home />} />
-            <Route path='login' element={<Login />} />
+            <Route path='login' element={<Login inputs={loginInputs} />} />
             <Route path='users' element={<Layout />}>
               <Route index element={<List />} />
               <Route path=':userId' element={<Single />} />
