@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { login } from 'services/authService';
+import { RESET } from 'context/auth/AuthTypes';
 import { useGlobalAuthContext } from 'context/auth/AuthContext';
 import './login.scss';
 
@@ -13,7 +14,7 @@ const initialState = {
 const Login = ({ inputs }) => {
   const navigate = useNavigate();
   const [credentials, setCredentials] = useState(initialState);
-  const { user, isSuccess, isError, isLoading, loginFailure, loginStart, loginSuccess }
+  const { user, dispatch, isSuccess, isError, isLoading, loginFailure, loginStart, loginSuccess }
     = useGlobalAuthContext();
 
   const handleChange = ({ target: input }) => {
@@ -43,7 +44,8 @@ const Login = ({ inputs }) => {
 
   useEffect(() => {
     user && isSuccess && navigate('/');
-  }, [user, isSuccess, navigate]);
+    return () => dispatch({ type: RESET });
+  }, [user, isSuccess, dispatch, navigate]);
 
   return (
     <div className='login'>
