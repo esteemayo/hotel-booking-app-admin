@@ -11,16 +11,18 @@ const AuthReducer = (state, { payload, type }) => {
     case actions.LOGIN_SUCCESS:
       return {
         ...state,
-        loading: false,
+        isLoading: false,
+        isSuccess: true,
         user: payload,
       };
 
     case actions.LOGIN_FAILURE:
       return {
         ...state,
-        loading: false,
+        isLoading: false,
+        isSuccess: false,
         user: null,
-        error: payload,
+        isError: payload,
       };
 
     case actions.LOGOUT:
