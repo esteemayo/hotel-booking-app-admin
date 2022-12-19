@@ -16,8 +16,9 @@ const user = getFromStorage(tokenKey);
 
 const INITIAL_STATE = {
   user: user ?? null,
-  loading: false,
-  error: null,
+  isSuccess: false,
+  isLoading: false,
+  isError: null,
 };
 
 if (token) {
