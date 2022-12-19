@@ -2,21 +2,22 @@ import Axios from 'axios';
 import { toast } from 'react-toastify';
 
 import logger from './logService';
+import { getJwt } from './authService';
 
-const devEnv = process.env.NODE_ENV !=='production';
-const { REACT_APP_DEV_API_URL,REACT_APP_PROD_API_URL } = process.env;
+const devEnv = process.env.NODE_ENV !== 'production';
+const { REACT_APP_DEV_API_URL, REACT_APP_PROD_API_URL } = process.env;
 
 const API = Axios.create({
-  baseURL: `${devEnv ? REACT_APP_DEV_API_URL :REACT_APP_PROD_API_URL}`,
-  headers:{
+  baseURL: `${devEnv ? REACT_APP_DEV_API_URL : REACT_APP_PROD_API_URL}`,
+  headers: {
     Accept: 'application/json',
   },
 });
 
 API.interceptors.request.use((req) => {
-  req.headers.common['Authorization'] = `Bearer `;
+  req.headers.common['Authorization'] = `Bearer ${getJwt()}`;
   return req;
-},(error) => {
+}, (error) => {
   logger.log(error);
   return Promise.reject(error);
 });
