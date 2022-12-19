@@ -36,7 +36,7 @@ const AuthReducer = (state, { payload, type }) => {
         ...state,
         isSuccess: false,
         isLoading: false,
-        isError: false,
+        isError: null,
       };
 
     default:
