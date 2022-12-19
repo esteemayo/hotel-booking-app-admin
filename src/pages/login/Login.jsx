@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { login } from 'services/authService';
@@ -13,7 +13,7 @@ const initialState = {
 const Login = ({ inputs }) => {
   const navigate = useNavigate();
   const [credentials, setCredentials] = useState(initialState);
-  const { user, error, loading, loginFailure, loginStart, loginSuccess }
+  const { user, isSuccess, isError, isLoading, loginFailure, loginStart, loginSuccess }
     = useGlobalAuthContext();
 
   const handleChange = ({ target: input }) => {
@@ -23,9 +23,7 @@ const Login = ({ inputs }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     await handleLogin();
-    user && await navigate('/');
   };
 
   const handleLogin = async () => {
@@ -65,13 +63,13 @@ const Login = ({ inputs }) => {
         })}
         <button
           type='submit'
-          disabled={loading}
+          disabled={isLoading}
           onClick={handleSubmit}
           className='login__button'
         >
           Login
         </button>
-        {error && <span className='login__error'>{error.message}</span>}
+        {isError && <span className='login__isError'>{isError.message}</span>}
       </div>
     </div>
   );
