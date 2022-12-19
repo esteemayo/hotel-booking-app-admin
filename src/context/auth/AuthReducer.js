@@ -5,7 +5,7 @@ const AuthReducer = (state, { payload, type }) => {
     case actions.LOGIN_START:
       return {
         ...state,
-        loading: true,
+        isLoading: true,
       };
 
     case actions.LOGIN_SUCCESS:
@@ -29,6 +29,14 @@ const AuthReducer = (state, { payload, type }) => {
       return {
         ...state,
         user: null,
+      };
+
+    case actions.RESET:
+      return {
+        ...state,
+        isSuccess: false,
+        isLoading: false,
+        isError: false,
       };
 
     default:
