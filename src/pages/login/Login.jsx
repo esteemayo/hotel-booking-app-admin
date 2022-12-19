@@ -32,7 +32,12 @@ const Login = ({ inputs }) => {
     loginStart();
     try {
       const { data } = await login({ ...credentials });
-      loginSuccess(data);
+
+      if (data.role === 'admin') {
+        loginSuccess({ ...data.details });
+      } else {
+        loginFailure({ message: 'You are not allowed' });
+      }
     } catch (err) {
       loginFailure(err.response.data);
     }
