@@ -43,6 +43,10 @@ const Login = ({ inputs }) => {
     }
   };
 
+  useEffect(() => {
+    user && isSuccess && navigate('/');
+  }, [user, isSuccess, navigate]);
+
   return (
     <div className='login'>
       <div className='login__container'>
