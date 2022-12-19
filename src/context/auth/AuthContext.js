@@ -1,3 +1,4 @@
+import jwtDecode from 'jwt-decode';
 import { createContext, useContext, useReducer } from 'react';
 
 import * as actions from './AuthTypes';
