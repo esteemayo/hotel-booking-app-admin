@@ -63,6 +63,12 @@ const AuthProvider = ({ children }) => {
     });
   };
 
+  const reset = () => {
+    dispatch({
+      type: actions.RESET,
+    });
+  };
+
   useEffect(() => {
     setToStorage(tokenKey, state.user);
   }, [state.user]);
@@ -74,6 +80,7 @@ const AuthProvider = ({ children }) => {
       loginStart,
       loginSuccess,
       logout,
+      reset,
     }}>
       {children}
     </AuthContext.Provider>
