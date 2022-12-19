@@ -55,6 +55,13 @@ const AuthProvider = ({ children }) => {
     });
   };
 
+  const logout = () => {
+    clearFromStorage();
+    dispatch({
+      type: actions.LOGOUT,
+    });
+  };
+
   useEffect(() => {
     setToStorage(tokenKey, state.user);
   }, [state.user]);
