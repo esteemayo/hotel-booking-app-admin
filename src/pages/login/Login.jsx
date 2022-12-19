@@ -62,7 +62,7 @@ const Login = ({ inputs }) => {
         >
           Login
         </button>
-        {error && <span className='login__error'>{error}</span>}
+        {error && <span className='login__error'>{error.message}</span>}
       </div>
     </div>
   );
