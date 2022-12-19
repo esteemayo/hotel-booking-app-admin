@@ -72,6 +72,7 @@ const AuthProvider = ({ children }) => {
       loginFailure,
       loginStart,
       loginSuccess,
+      logout,
     }}>
       {children}
     </AuthContext.Provider>
