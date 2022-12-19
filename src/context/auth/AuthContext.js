@@ -1,4 +1,7 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useReducer } from 'react';
+
+import * as actions from './AuthTypes';
+import AuthReducer from './AuthReducer';
 
 const INITIAL_STATE = {
   user: null,
@@ -9,7 +12,38 @@ const INITIAL_STATE = {
 const AuthContext = createContext(INITIAL_STATE);
 
 const AuthProvider = ({ children }) => {
-  return <AuthContext.Provider value={{ 'hello': 'world' }}>{children}</AuthContext.Provider>
+  const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
+
+  const loginStart = () => {
+    dispatch({
+      type: actions.LOGIN_START,
+    });
+  };
+
+  const loginSuccess = (credentials) => {
+    dispatch({
+      type: actions.LOGIN_SUCCESS,
+      payload: credentials,
+    });
+  };
+
+  const loginFailure = (error) => {
+    dispatch({
+      type: actions.LOGIN_FAILURE,
+      payload: error,
+    });
+  };
+
+  return (
+    <AuthContext.Provider value={{
+      ...state,
+      loginFailure,
+      loginStart,
+      loginSuccess,
+    }}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 export const useGlobalAuthContext = () => {
