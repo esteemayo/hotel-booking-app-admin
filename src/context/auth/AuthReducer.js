@@ -20,7 +20,7 @@ const AuthReducer = (state, { payload, type }) => {
         ...state,
         loading: false,
         user: null,
-        error: payload.message,
+        error: payload,
       };
 
     case actions.LOGOUT:
