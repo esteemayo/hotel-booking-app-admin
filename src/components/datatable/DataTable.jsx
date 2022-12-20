@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 import { userColumns, userRows, productColumns, productRows } from 'data';
