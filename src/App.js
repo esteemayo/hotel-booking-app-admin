@@ -49,7 +49,11 @@ function App() {
               />
               <Route
                 path='new'
-                element={<New inputs={userInputs} title='Add new user' />}
+                element={
+                  <ProtectedRoute>
+                    <New inputs={userInputs} title='Add new user' />
+                  </ProtectedRoute>
+                }
               />
             </Route>
             <Route path='products' element={<Layout />}>
