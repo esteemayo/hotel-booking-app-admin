@@ -63,7 +63,11 @@ function App() {
               <Route path=':productId' element={<Single />} />
               <Route
                 path='new'
-                element={<New inputs={productInputs} title='Add new product' />}
+                element={
+                  <ProtectedRoute>
+                    <New inputs={productInputs} title='Add new product' />
+                  </ProtectedRoute>
+                }
               />
             </Route>
             <Route path='*' element={<NotFound />} />
