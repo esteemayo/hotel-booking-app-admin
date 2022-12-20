@@ -53,7 +53,13 @@ function App() {
               />
             </Route>
             <Route path='products' element={<Layout />}>
-              <Route index element={<List />} />
+              <Route index
+                element={
+                  <ProtectedRoute>
+                    <List />
+                  </ProtectedRoute>
+                }
+              />
               <Route path=':productId' element={<Single />} />
               <Route
                 path='new'
