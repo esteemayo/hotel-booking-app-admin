@@ -33,7 +33,13 @@ function App() {
             />
             <Route path='login' element={<Login inputs={loginInputs} />} />
             <Route path='users' element={<Layout />}>
-              <Route index element={<List />} />
+              <Route index
+                element={
+                  <ProtectedRoute>
+                    <List />
+                  </ProtectedRoute>
+                }
+              />
               <Route path=':userId' element={<Single />} />
               <Route
                 path='new'
