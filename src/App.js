@@ -40,7 +40,13 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route path=':userId' element={<Single />} />
+              <Route path=':userId'
+                element={
+                  <ProtectedRoute>
+                    <Single />
+                  </ProtectedRoute>
+                }
+              />
               <Route
                 path='new'
                 element={<New inputs={userInputs} title='Add new user' />}
