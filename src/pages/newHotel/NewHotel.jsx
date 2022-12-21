@@ -88,7 +88,7 @@ const NewHotel = () => {
               </div>
               <div className='select-rooms'>
                 <label htmlFor='rooms'>Rooms</label>
-                <select id='rooms' name='rooms' multiple onChange={handleChange}>
+                <select id='rooms' name='rooms' multiple onChange={handleSelect}>
                   <option value={false}>No</option>
                   <option value={true}>Yes</option>
                 </select>
