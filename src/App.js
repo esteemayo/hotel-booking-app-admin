@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import ProtectedRoute from 'utils/ProtectedRoute';
+import { hotelColumns, roomColumns, userColumns } from 'data';
 import { loginInputs, productInputs, userInputs } from 'formData';
 import { useGlobalContext } from 'context/darkmode/DarkModeContext';
 import {
@@ -15,7 +16,6 @@ import {
 } from 'pages';
 
 import './style/dark.scss';
-import { hotelColumns, roomColumns, userColumns } from 'data';
 
 function App() {
   const { darkMode } = useGlobalContext();
