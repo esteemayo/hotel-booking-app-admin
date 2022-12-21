@@ -24,7 +24,7 @@ const NewHotel = () => {
       return option.value;
     });
 
-    setData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
