@@ -75,6 +75,13 @@ const NewHotel = () => {
                   <option value={true}>Yes</option>
                 </select>
               </div>
+              <div className='select-rooms'>
+                <label htmlFor='rooms'>Rooms</label>
+                <select id='rooms' name='rooms' multiple onChange={handleChange}>
+                  <option value={false}>No</option>
+                  <option value={true}>Yes</option>
+                </select>
+              </div>
 
               <button>Send</button>
             </form>
