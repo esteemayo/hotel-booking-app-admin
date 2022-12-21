@@ -34,12 +34,13 @@
 
       .right {
         flex: 2;
+        padding: 0 2rem;
 
         form {
           display: flex;
           flex-wrap: wrap;
           gap: 2rem;
-          justify-content: space-around;
+          justify-content: space-between;
         }
 
         .form-input {
