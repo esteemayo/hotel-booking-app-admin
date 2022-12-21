@@ -48,10 +48,10 @@ export const userInputs = [
     placeholder: 'john_doe',
   },
   {
-    id: 'displayName',
-    label: 'Name and surname',
+    id: 'name',
+    label: 'Name',
     type: 'text',
-    name: 'displayName',
+    name: 'name',
     placeholder: 'John Doe',
   },
   {
@@ -60,6 +60,20 @@ export const userInputs = [
     type: 'email',
     name: 'email',
     placeholder: 'john_doe@gmail.com',
+  },
+  {
+    id: 'country',
+    label: 'Country',
+    type: 'text',
+    name: 'country',
+    placeholder: 'USA',
+  },
+  {
+    id: 'city',
+    label: 'City',
+    type: 'text',
+    name: 'city',
+    placeholder: 'New York',
   },
   {
     id: 'phone',
@@ -76,55 +90,69 @@ export const userInputs = [
     placeholder: '********',
   },
   {
+    id: 'confirmPassword',
+    label: 'Confirm Password',
+    type: 'password',
+    name: 'confirmPassword',
+    placeholder: '********',
+  },
+];
+
+export const hotelInputs = [
+  {
+    id: 'name',
+    label: 'Name',
+    type: 'text',
+    name: 'name',
+    placeholder: 'My Hotel',
+  },
+  {
+    id: 'type',
+    label: 'Type',
+    type: 'text',
+    name: 'type',
+    placeholder: 'hotel',
+  },
+  {
+    id: 'city',
+    label: 'City',
+    type: 'text',
+    name: 'city',
+    placeholder: 'New York',
+  },
+  {
     id: 'address',
     label: 'Address',
     type: 'text',
     name: 'address',
-    placeholder: 'Elton St. 216 NewYork',
+    placeholder: 'Elton St. 216',
   },
   {
-    id: 'country',
-    label: 'Country',
+    id: 'distance',
+    label: 'Distance from City Center',
     type: 'text',
-    name: 'country',
-    placeholder: 'USA',
+    name: 'distance',
+    placeholder: '500',
   },
-];
-
-export const productInputs = [
   {
     id: 'title',
     label: 'Title',
     type: 'text',
     name: 'title',
-    placeholder: 'Apple Macbook Pro',
+    placeholder: 'The Best Hotel',
   },
   {
-    id: 'description',
+    id: 'desc',
     label: 'Description',
     type: 'text',
-    name: 'description',
+    name: 'desc',
     placeholder: 'Description',
   },
   {
-    id: 'category',
-    label: 'Category',
-    type: 'text',
-    name: 'category',
-    placeholder: 'Computers',
-  },
-  {
-    id: 'price',
+    id: 'cheapestPrice',
     label: 'Price',
     type: 'text',
-    name: 'price',
+    name: 'cheapestPrice',
     placeholder: '100',
-  },
-  {
-    id: 'stock',
-    label: 'Stock',
-    type: 'text',
-    name: 'stock',
-    placeholder: 'in stock',
   },
 ];
