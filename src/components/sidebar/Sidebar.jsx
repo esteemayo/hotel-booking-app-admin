@@ -43,10 +43,10 @@ const Sidebar = () => {
               <span>Users</span>
             </li>
           </Link>
-          <Link to='/products' className='link'>
+          <Link to='/hotels' className='link'>
             <li>
               <Store className='icon' />
-              <span>Products</span>
+              <span>Hotels</span>
             </li>
           </Link>
           <li>
