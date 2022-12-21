@@ -6,7 +6,7 @@ import DataTable from 'components/datatable/DataTable';
 
 import './list.scss';
 
-const List = () => {
+const List = ({ columns }) => {
   const { pathname } = useLocation();
   const path = pathname.split('/')[1];
 
@@ -15,7 +15,7 @@ const List = () => {
       <Sidebar />
       <div className='list-container'>
         <Navbar />
-        <DataTable path={path} />
+        <DataTable path={path} columns={columns} />
       </div>
     </div>
   );
