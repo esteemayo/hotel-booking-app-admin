@@ -9,9 +9,9 @@ import {
   Layout,
   List,
   Login,
-  New,
   NewHotel,
   NewRoom,
+  NewUser,
   NotFound,
   SharedLayout,
   Single,
@@ -54,7 +54,7 @@ function App() {
                 path='new'
                 element={
                   <ProtectedRoute>
-                    <New inputs={userInputs} title='Add new user' />
+                    <NewUser inputs={userInputs} title='Add new user' />
                   </ProtectedRoute>
                 }
               />
