@@ -49,10 +49,12 @@ const Sidebar = () => {
               <span>Hotels</span>
             </li>
           </Link>
-          <li>
-            <CreditCard className='icon' />
-            <span>Orders</span>
-          </li>
+          <Link to='/rooms' className='link'>
+            <li>
+              <CreditCard className='icon' />
+              <span>Rooms</span>
+            </li>
+          </Link>
           <li>
             <LocalShipping className='icon' />
             <span>Delivery</span>
