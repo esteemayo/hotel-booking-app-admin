@@ -10,6 +10,11 @@ const NewHotel = ({ inputs, title }) => {
   const [files, setFiles] = useState(null);
   const [data, setData] = useState(null);
 
+  const handleChange = ({ target: input }) => {
+    const { id, value } = input;
+    setData((prev) => ({ ...prev, [id]: value }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -52,7 +57,13 @@ const NewHotel = ({ inputs, title }) => {
                 return (
                   <div className='form-input' key={id}>
                     <label htmlFor={id}>{label}</label>
-                    <input type={type} id={name} placeholder={placeholder} />
+                    <input
+                      id={name}
+                      name={name}
+                      type={type}
+                      onChange={handleChange}
+                      placeholder={placeholder}
+                    />
                   </div>
                 );
               })}
