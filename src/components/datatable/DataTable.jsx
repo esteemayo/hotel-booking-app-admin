@@ -2,13 +2,12 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
-import { userColumns, productColumns } from 'data';
 import { deleteUser, getUsers } from 'services/userService';
 import { deleteHotel, getHotels } from 'services/hotelService';
 
 import './datatable.scss';
 
-const DataTable = ({ path }) => {
+const DataTable = ({ path, columns }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const DataTable = ({ path }) => {
       } catch (err) {
         console.log(err);
       }
-    })()
+    })();
   }, [path]);
 
   const handleDelete = async (id) => {
@@ -77,11 +76,7 @@ const DataTable = ({ path }) => {
       </div>
       <DataGrid
         rows={data}
-        columns={
-          path === 'users'
-            ? userColumns.concat(actionColumn)
-            : productColumns.concat(actionColumn)
-        }
+        columns={columns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection
