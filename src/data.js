@@ -11,7 +11,11 @@ export const userColumns = [
     renderCell: (params) => {
       return (
         <div className='cell-with-img'>
-          <img className='cell-img' src={params.row.img} alt='avatar' />
+          <img
+            className='cell-img'
+            src={params.row.img || 'https://i.ibb.co/MBtjqXQ/no-avatar.gif'}
+            alt='avatar'
+          />
           {params.row.username}
         </div>
       );
