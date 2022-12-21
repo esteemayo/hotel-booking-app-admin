@@ -24,14 +24,19 @@ const NewUser = ({ inputs, title }) => {
 
     const form = new FormData();
     form.append('file', file);
-    form.append('upload_preset', 'booking');
+    form.append('upload_preset', 'upload');
 
     try {
       const { data } = await uploadImage(form);
       const { url } = data;
-      setInfo((prev) => ({ ...prev, img: url }));
 
-      await createUser({ ...info });
+      const credentials = {
+        ...info,
+        img: url
+      }
+
+      await createUser({ ...credentials });
+      navigate('/users');
     } catch (err) {
       console.log(err);
     }
