@@ -37,12 +37,12 @@ const DataTable = ({ path }) => {
       renderCell: (params) => {
         return (
           <div className='cell-action'>
-            <Link to={`/${path}/${params.row.id}`}>
+            <Link to={`/${path}/${params.row._id}`}>
               <button className='view-button'>View</button>
             </Link>
             <button
               className='delete-button'
-              onClick={() => handleDelete(params.row.id)}
+              onClick={() => handleDelete(params.row._id)}
             >
               Delete
             </button>
