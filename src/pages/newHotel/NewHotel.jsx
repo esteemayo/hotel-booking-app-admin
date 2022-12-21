@@ -90,10 +90,11 @@ const NewHotel = () => {
               <div className='select-rooms'>
                 <label htmlFor='rooms'>Rooms</label>
                 <select id='rooms' name='rooms' multiple onChange={handleSelect}>
-                  {data?.rooms?.map((item) => {
-                    return (
-                      <option key={item._id} value={item._id}>{item.title}</option>
-                    );
+                  {loading ? 'loading' : (
+                    data?.rooms?.map((item) => {
+                      return (
+                        <option key={item._id} value={item._id}>{item.title}</option>
+                      );
                   })}
                 </select>
               </div>
