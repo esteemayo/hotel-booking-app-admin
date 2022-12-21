@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import ProtectedRoute from 'utils/ProtectedRoute';
 import { hotelColumns, roomColumns, userColumns } from 'data';
-import { loginInputs, productInputs, userInputs } from 'formData';
 import { useGlobalContext } from 'context/darkmode/DarkModeContext';
+import { hotelInputs, loginInputs, roomInputs, userInputs } from 'formData';
 import {
   Home,
   Layout,
@@ -70,7 +70,7 @@ function App() {
                 path='new'
                 element={
                   <ProtectedRoute>
-                    <New inputs={productInputs} title='Add new hotel' />
+                    <New inputs={hotelInputs} title='Add new hotel' />
                   </ProtectedRoute>
                 }
               />
@@ -88,7 +88,7 @@ function App() {
                 path='new'
                 element={
                   <ProtectedRoute>
-                    <New inputs={productInputs} title='Add new room' />
+                    <New inputs={roomInputs} title='Add new room' />
                   </ProtectedRoute>
                 }
               />
