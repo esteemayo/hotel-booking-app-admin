@@ -1,13 +1,15 @@
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import { Link, useLocation } from 'react-router-dom';
 
 import { deleteUser, getUsers } from 'services/userService';
 import { deleteHotel, getHotels } from 'services/hotelService';
 
 import './datatable.scss';
 
-const DataTable = ({ path, columns }) => {
+const DataTable = ({ columns }) => {
+  const { pathname } = useLocation();
+  const path = pathname.split('/')[1];
   const [data, setData] = useState([]);
 
   useEffect(() => {
