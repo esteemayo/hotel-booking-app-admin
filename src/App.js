@@ -56,7 +56,7 @@ function App() {
                 }
               />
             </Route>
-            <Route path='products' element={<Layout />}>
+            <Route path='hotels' element={<Layout />}>
               <Route index
                 element={
                   <ProtectedRoute>
@@ -64,12 +64,12 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route path=':productId' element={<Single />} />
+              <Route path=':hotelId' element={<Single />} />
               <Route
                 path='new'
                 element={
                   <ProtectedRoute>
-                    <New inputs={productInputs} title='Add new product' />
+                    <New inputs={productInputs} title='Add new hotel' />
                   </ProtectedRoute>
                 }
               />
