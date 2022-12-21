@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
 
 import Navbar from 'components/navbar/Navbar';
@@ -9,6 +10,7 @@ import { uploadImage } from 'services/imageService';
 import './newUser.scss';
 
 const NewUser = ({ inputs, title }) => {
+  const navigate = useNavigate();
   const [file, setFile] = useState('');
   const [info, setInfo] = useState({});
 
