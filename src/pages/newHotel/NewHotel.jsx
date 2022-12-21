@@ -9,6 +9,7 @@ import Sidebar from 'components/sidebar/Sidebar';
 import './newHotel.scss';
 
 const NewHotel = () => {
+  const [rooms, setRooms] = useState([]);
   const [files, setFiles] = useState(null);
   const [formData, setFormData] = useState(null);
 
