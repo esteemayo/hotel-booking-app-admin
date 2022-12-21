@@ -15,7 +15,7 @@ const NewHotel = () => {
 
   const handleChange = ({ target: input }) => {
     const { id, value } = input;
-    setData((prev) => ({ ...prev, [id]: value }));
+    setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
   const handleSelect = ({ target: input }) => {
