@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
 
+import { hotelInputs } from 'formData';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
 
 import './newHotel.scss';
 
-const NewHotel = ({ inputs, title }) => {
+const NewHotel = () => {
   const [files, setFiles] = useState(null);
   const [data, setData] = useState(null);
 
@@ -25,7 +26,7 @@ const NewHotel = ({ inputs, title }) => {
       <div className='new-container'>
         <Navbar />
         <div className='top'>
-          <h1>{title}</h1>
+          <h1>Add new hotel</h1>
         </div>
         <div className='bottom'>
           <div className='left'>
@@ -52,7 +53,7 @@ const NewHotel = ({ inputs, title }) => {
                   style={{ display: 'none' }}
                 />
               </div>
-              {inputs.map((item) => {
+              {hotelInputs.map((item) => {
                 const { id, name, type, label, placeholder } = item;
                 return (
                   <div className='form-input' key={id}>
