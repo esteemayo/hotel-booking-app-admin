@@ -90,8 +90,11 @@ const NewHotel = () => {
               <div className='select-rooms'>
                 <label htmlFor='rooms'>Rooms</label>
                 <select id='rooms' name='rooms' multiple onChange={handleSelect}>
-                  <option value={false}>No</option>
-                  <option value={true}>Yes</option>
+                  {data?.rooms?.map((item) => {
+                    return (
+                      <option key={item._id} value={item._id}>{item.title}</option>
+                    );
+                  })}
                 </select>
               </div>
               <button type='submit'>Send</button>
