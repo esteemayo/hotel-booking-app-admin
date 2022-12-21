@@ -24,7 +24,7 @@ const NewUser = ({ inputs, title }) => {
 
     const form = new FormData();
     form.append('file', file);
-    form.append('upload_preset', 'upload');
+    form.append('upload_preset', 'booking');
 
     try {
       const { data } = await uploadImage(form);
