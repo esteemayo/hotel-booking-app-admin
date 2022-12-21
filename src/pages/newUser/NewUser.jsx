@@ -8,6 +8,12 @@ import './newUser.scss';
 
 const NewUser = ({ inputs, title }) => {
   const [file, setFile] = useState('');
+  const [info, setInfo] = useState({});
+
+  const handleChange = ({ target: input }) => {
+    const { name, value } = input;
+    setInfo((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -50,7 +56,12 @@ const NewUser = ({ inputs, title }) => {
                 return (
                   <div className='form-input' key={id}>
                     <label htmlFor={id}>{label}</label>
-                    <input type={type} id={name} placeholder={placeholder} />
+                    <input
+                      id={name}
+                      type={type}
+                      onChange={handleChange}
+                      placeholder={placeholder}
+                    />
                   </div>
                 );
               })}
