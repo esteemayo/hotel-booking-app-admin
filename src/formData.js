@@ -156,3 +156,34 @@ export const hotelInputs = [
     placeholder: '100',
   },
 ];
+
+export const roomInputs = [
+  {
+    id: 'title',
+    label: 'Title',
+    type: 'text',
+    name: 'title',
+    placeholder: '2 bed room',
+  },
+  {
+    id: 'desc',
+    label: 'Description',
+    type: 'text',
+    name: 'desc',
+    placeholder: 'King size bed, 1 bedroom',
+  },
+  {
+    id: 'price',
+    label: 'Price',
+    type: 'number',
+    name: 'price',
+    placeholder: '100',
+  },
+  {
+    id: 'maxPeople',
+    label: 'Max People',
+    type: 'text',
+    name: 'maxPeople',
+    placeholder: '2',
+  },
+];
