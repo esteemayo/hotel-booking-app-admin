@@ -95,7 +95,8 @@ const NewHotel = () => {
                       return (
                         <option key={item._id} value={item._id}>{item.title}</option>
                       );
-                  })}
+                    })
+                  )}
                 </select>
               </div>
               <button type='submit'>Send</button>
