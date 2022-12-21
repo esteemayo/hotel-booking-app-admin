@@ -5,6 +5,7 @@ import useFetch from 'hooks/useFetch';
 import { hotelInputs } from 'formData';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
+import { uploadImage } from 'services/imageService';
 
 import './newHotel.scss';
 
