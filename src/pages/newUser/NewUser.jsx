@@ -3,6 +3,8 @@ import { DriveFolderUploadOutlined } from '@mui/icons-material';
 
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
+import { createUser } from 'services/userService';
+import { uploadImage } from 'services/imageService';
 
 import './newUser.scss';
 
@@ -15,8 +17,22 @@ const NewUser = ({ inputs, title }) => {
     setInfo((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const form = new FormData();
+    form.append('file', file);
+    form.append('upload_preset', 'booking');
+
+    try {
+      const { data } = await uploadImage(form);
+      const { url } = data;
+      setInfo((prev) => ({ ...prev, img: url }));
+
+      await createUser({ ...info });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
