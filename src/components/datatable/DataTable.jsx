@@ -70,6 +70,7 @@ const DataTable = ({ path }) => {
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection
+        getRowId={(row) => row._id}
         className='data-grid'
       />
     </div>
