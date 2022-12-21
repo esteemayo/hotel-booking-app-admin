@@ -48,11 +48,11 @@
 
           select {
             border: none;
+            outline: none;
             display: inline-block;
             width: 100%;
             padding: 1rem;
             border-bottom: 1px solid gray;
-            outline-color: var(--color-gray-light);
             caret-color: #7451f8;
           }
         }
