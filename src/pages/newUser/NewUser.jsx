@@ -22,17 +22,19 @@ const NewUser = ({ inputs, title }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const credentials = {
+      ...info,
+    }
+
     const form = new FormData();
     form.append('file', file);
     form.append('upload_preset', 'booking');
 
     try {
-      const { data } = await uploadImage(form);
-      const { url } = data;
-
-      const credentials = {
-        ...info,
-        img: url
+      if (file) {
+        const { data } = await uploadImage(form);
+        const { url } = data;
+        credentials.img = url;
       }
 
       await createUser({ ...credentials });
