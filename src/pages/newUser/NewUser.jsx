@@ -67,7 +67,7 @@ const NewUser = ({ inputs, title }) => {
                 );
               })}
 
-              <button>Send</button>
+              <button type='submit'>Send</button>
             </form>
           </div>
         </div>
