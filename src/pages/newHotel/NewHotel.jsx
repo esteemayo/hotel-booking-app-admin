@@ -32,7 +32,7 @@ const NewHotel = ({ inputs, title }) => {
             <img
               src={
                 files
-                  ? URL.createObjectURL(files)
+                  ? URL.createObjectURL(files[0])
                   : 'https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg'
               }
               alt=''
