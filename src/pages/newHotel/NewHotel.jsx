@@ -8,6 +8,7 @@ import './newHotel.scss';
 
 const NewHotel = ({ inputs, title }) => {
   const [files, setFiles] = useState(null);
+  const [data, setData] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
