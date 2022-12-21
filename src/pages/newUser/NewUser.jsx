@@ -57,7 +57,8 @@ const NewUser = ({ inputs, title }) => {
                   <div className='form-input' key={id}>
                     <label htmlFor={id}>{label}</label>
                     <input
-                      id={name}
+                      id={id}
+                      name={name}
                       type={type}
                       onChange={handleChange}
                       placeholder={placeholder}
