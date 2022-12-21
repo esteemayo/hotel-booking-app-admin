@@ -93,8 +93,7 @@ const NewHotel = () => {
                   <option value={true}>Yes</option>
                 </select>
               </div>
-
-              <button>Send</button>
+              <button type='submit'>Send</button>
             </form>
           </div>
         </div>
