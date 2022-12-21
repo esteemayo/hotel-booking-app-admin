@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
 
+import useFetch from 'hooks/useFetch';
 import { hotelInputs } from 'formData';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
