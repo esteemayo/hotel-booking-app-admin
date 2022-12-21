@@ -70,7 +70,7 @@ const NewHotel = () => {
               })}
               <div className='form-input'>
                 <label htmlFor='featured'>Featured</label>
-                <select name='featured' id='featured' onChange={handleChange}>
+                <select id='featured' name='featured' onChange={handleChange}>
                   <option value={false}>No</option>
                   <option value={true}>Yes</option>
                 </select>
