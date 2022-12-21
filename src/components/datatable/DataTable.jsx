@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
-import { getHotels } from 'services/hotelService';
 import { userColumns, productColumns } from 'data';
 import { deleteUser, getUsers } from 'services/userService';
+import { deleteHotel, getHotels } from 'services/hotelService';
 
 import './datatable.scss';
 
@@ -24,15 +24,23 @@ const DataTable = ({ path }) => {
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this user')) {
-      try {
-        setData((data) => {
-          return data.filter((item) => item._id !== id);
-        });
+      await deleteData(id);
+    }
+  };
 
+  const deleteData = async (id) => {
+    try {
+      setData((data) => {
+        return data.filter((item) => item._id !== id);
+      });
+
+      if (path === 'users') {
         await deleteUser(id);
-      } catch (err) {
-        console.log(err);
+      } else {
+        await deleteHotel(id);
       }
+    } catch (err) {
+      console.log(err);
     }
   };
 
