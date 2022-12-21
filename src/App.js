@@ -15,6 +15,7 @@ import {
 } from 'pages';
 
 import './style/dark.scss';
+import { hotelColumns, roomColumns, userColumns } from 'data';
 
 function App() {
   const { darkMode } = useGlobalContext();
@@ -36,7 +37,7 @@ function App() {
               <Route index
                 element={
                   <ProtectedRoute>
-                    <List />
+                    <List columns={userColumns} />
                   </ProtectedRoute>
                 }
               />
@@ -60,7 +61,7 @@ function App() {
               <Route index
                 element={
                   <ProtectedRoute>
-                    <List />
+                    <List columns={hotelColumns} />
                   </ProtectedRoute>
                 }
               />
@@ -70,6 +71,24 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <New inputs={productInputs} title='Add new hotel' />
+                  </ProtectedRoute>
+                }
+              />
+            </Route>
+            <Route path='rooms' element={<Layout />}>
+              <Route index
+                element={
+                  <ProtectedRoute>
+                    <List columns={roomColumns} />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path=':roomId' element={<Single />} />
+              <Route
+                path='new'
+                element={
+                  <ProtectedRoute>
+                    <New inputs={productInputs} title='Add new room' />
                   </ProtectedRoute>
                 }
               />
