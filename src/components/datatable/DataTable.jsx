@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
-import { userColumns, userRows, productColumns, productRows } from 'data';
+import { getUsers } from 'services/userService';
+import { userColumns, productColumns } from 'data';
 
 import './datatable.scss';
 
@@ -10,18 +11,21 @@ const DataTable = ({ path }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    if (path === 'users') {
-      setData(userRows);
-    } else {
-      setData(productRows);
-    }
-  }, [path]);
+    (async () => {
+      try {
+        const { data } = await getUsers();
+        setData(data.users);
+      } catch (err) {
+        console.log(err);
+      }
+    })()
+  }, []);
 
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this user')) {
-      setData((data) => {
-        return data.filter((item) => item.id !== id);
-      });
+      // setData((data) => {
+      //   return data.filter((item) => item.id !== id);
+      // });
     }
   };
 
