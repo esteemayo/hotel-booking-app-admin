@@ -21,10 +21,10 @@ const NewHotel = () => {
   };
 
   const handleSelect = ({ target: input }) => {
-    const { name, selectedOptions } = input;
+    const { selectedOptions } = input;
     const value = Array.from(selectedOptions, (option) => option.value);
 
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setRooms(value);
   };
 
   const handleSubmit = (e) => {
