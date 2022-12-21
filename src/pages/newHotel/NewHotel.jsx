@@ -9,7 +9,9 @@ import './newHotel.scss';
 
 const NewHotel = () => {
   const [files, setFiles] = useState(null);
-  const [data, setData] = useState(null);
+  const [formData, setFormData] = useState(null);
+
+  const { data, loading } = useFetch('/rooms');
 
   const handleChange = ({ target: input }) => {
     const { id, value } = input;
