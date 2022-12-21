@@ -16,6 +16,15 @@ const NewHotel = () => {
     setData((prev) => ({ ...prev, [id]: value }));
   };
 
+  const handleSelect = ({ target: input }) => {
+    const { name, selectedOptions } = input;
+    const value = Array.from(selectedOptions, (option) => {
+      return option.value;
+    });
+
+    setData((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
