@@ -1,4 +1,4 @@
-import LoadingToRedirect from './LoadingToRedirect';
+import { Navigate } from 'react-router-dom';
 import { useGlobalAuthContext } from 'context/auth/AuthContext';
 
 const AuthRoute = ({ children }) => {
