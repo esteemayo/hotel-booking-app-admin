@@ -91,7 +91,7 @@ export const roomColumns = [
   {
     field: 'desc',
     headerName: 'Description',
-    width: 200,
+    width: 300,
   },
   {
     field: 'price',
