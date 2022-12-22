@@ -9,11 +9,13 @@ import {
   SearchOutlined,
 } from '@mui/icons-material';
 
+import { useGlobalAuthContext } from 'context/auth/AuthContext';
 import { useGlobalContext } from 'context/darkmode/DarkModeContext';
 
 import './navbar.scss';
 
 const Navbar = () => {
+  const { user } = useGlobalAuthContext();
   const { darkMode, toggle } = useGlobalContext();
 
   return (
