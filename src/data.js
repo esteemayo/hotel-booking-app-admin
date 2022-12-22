@@ -101,6 +101,6 @@ export const roomColumns = [
   {
     field: 'maxPeople',
     headerName: 'Max People',
-    width: 100,
+    width: 70,
   },
 ];
