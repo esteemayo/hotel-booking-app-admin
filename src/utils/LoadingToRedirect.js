@@ -15,7 +15,7 @@ const LoadingToRedirect = () => {
   }, [count, navigate]);
 
   return (
-    <div>
+    <div class='redirect'>
       <h2>Redirecting you in {count} seconds</h2>
     </div>
   );
