@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import useFetch from 'hooks/useFetch';
 import List from 'components/table/Table';
 import Chart from 'components/chart/Chart';
 import Navbar from 'components/navbar/Navbar';
@@ -13,8 +12,6 @@ import './home.scss';
 
 const Home = () => {
   const [userStats, setUserStats] = useState([]);
-  const { data } = useFetch('/users/stats');
-  console.log(data);
   console.log('Stats : ', userStats)
 
   const MONTHS = useMemo(() =>
