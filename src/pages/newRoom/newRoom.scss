@@ -81,6 +81,9 @@
             outline: none;
             display: inline-block;
             font-family: inherit;
+            width: 100%;
+            background-color: transparent;
+            color: var(--color-gray-light);
           }
 
           select {
