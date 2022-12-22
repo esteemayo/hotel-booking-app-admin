@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import AuthRoute from 'utils/AuthRoute';
 import ProtectedRoute from 'utils/ProtectedRoute';
 import { loginInputs, userInputs } from 'formData';
 import { hotelColumns, roomColumns, userColumns } from 'data';
