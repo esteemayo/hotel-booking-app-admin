@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { Link, useLocation } from 'react-router-dom';
 
+import { getRooms } from 'services/roomService';
 import { deleteUser, getUsers } from 'services/userService';
 import { deleteHotel, getHotels } from 'services/hotelService';
 
