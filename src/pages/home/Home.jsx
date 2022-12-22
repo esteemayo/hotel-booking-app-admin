@@ -35,7 +35,8 @@ const Home = () => {
     (async () => {
       try {
         const { data } = await getUserStats();
-        data.stats.map((item) =>
+        const statsList = data.stats.sort((a, b) => a._id - b._id);
+        statsList.map((item) =>
           setUserStats((prev) =>
             [...prev, { name: MONTHS[item._id - 1], 'Active User': item.total }]
           ));
