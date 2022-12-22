@@ -16,8 +16,16 @@ const DataTable = ({ columns }) => {
   useEffect(() => {
     (async () => {
       try {
-        const { data } = path === 'users' ? await getUsers() : await getHotels();
-        setData(path === 'users' ? data.users : data.hotels);
+        if (path === 'users') {
+          const { data } = await getUsers();
+          setData(data.users);
+        } else if (path === 'hotels') {
+          const { data } = await getHotels();
+          setData(data.hotels);
+        } else {
+          const { data } = await getRooms()
+          setData(data.rooms);
+        }
       } catch (err) {
         console.log(err);
       }
