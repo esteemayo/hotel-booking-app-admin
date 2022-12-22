@@ -32,13 +32,18 @@ const Home = () => {
     []);
 
   useEffect(() => {
-    (() => {
-      data.stats.map((item) =>
-        setUserStats((prev) =>
-          [...prev, { name: MONTHS[item._id - 1], 'Active User': item.total }]
-        ));
+    (async () => {
+      try {
+        const { data } = await getUserStats();
+        data.stats.map((item) =>
+          setUserStats((prev) =>
+            [...prev, { name: MONTHS[item._id - 1], 'Active User': item.total }]
+          ));
+      } catch (err) {
+        console.log(err);
+      }
     })();
-  }, [MONTHS, data.stats]);
+  }, [MONTHS]);
 
   return (
     <div className='home'>
