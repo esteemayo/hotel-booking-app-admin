@@ -17,6 +17,8 @@ const NewRoom = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const roomNumbers = rooms.split(',').map((item) => ({ number: item }));
+
     try {
       // 
     } catch (err) {
