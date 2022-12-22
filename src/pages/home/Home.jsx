@@ -7,6 +7,7 @@ import Navbar from 'components/navbar/Navbar';
 import Widget from 'components/widget/Widget';
 import Sidebar from 'components/sidebar/Sidebar';
 import Featured from 'components/featured/Featured';
+import { getUserStats } from 'services/userService';
 
 import './home.scss';
 
