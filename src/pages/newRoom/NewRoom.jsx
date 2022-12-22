@@ -8,7 +8,6 @@ import Sidebar from 'components/sidebar/Sidebar';
 import { createRoom } from 'services/roomService';
 
 import './newRoom.scss';
-import { createRoom } from 'services/roomService';
 
 const NewRoom = () => {
   const navigate = useNavigate();
@@ -22,9 +21,14 @@ const NewRoom = () => {
     e.preventDefault();
 
     const roomNumbers = rooms.split(',').map((item) => ({ number: item }));
+    const newRoom = {
+      ...values,
+      roomNumbers,
+    };
 
     try {
-      // 
+      await createRoom(hotelId, newRoom);
+      navigate('/rooms');
     } catch (err) {
       console.log(err);
     }
