@@ -42,6 +42,18 @@ const NewRoom = () => {
                   </div>
                 );
               })}
+              <div className='form-input'>
+                <label htmlFor='hotelId'>Choose a hotel</label>
+                <select id='hotelId' name='hotelId'>
+                  {loading ? 'loading' : (
+                    data?.hotels?.map((item) => {
+                      return (
+                        <option key={item._id} value={item._id}>{item.name}</option>
+                      );
+                    })
+                  )}
+                </select>
+              </div>
 
               <button type='submit'>Send</button>
             </form>
