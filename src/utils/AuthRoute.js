@@ -4,7 +4,7 @@ import { useGlobalAuthContext } from 'context/auth/AuthContext';
 const AuthRoute = ({ children }) => {
   const { user } = useGlobalAuthContext();
 
-  return user ? <LoadingToRedirect /> : children;
+  return user ? <Navigate to='/' /> : children;
 };
 
 export default AuthRoute;
