@@ -14,11 +14,13 @@ import {
   Store,
 } from '@mui/icons-material';
 
+import { useGlobalAuthContext } from 'context/auth/AuthContext';
 import { useGlobalContext } from 'context/darkmode/DarkModeContext';
 
 import './sidebar.scss';
 
 const Sidebar = () => {
+  const { logout } = useGlobalAuthContext();
   const { dark, light } = useGlobalContext();
 
   return (
