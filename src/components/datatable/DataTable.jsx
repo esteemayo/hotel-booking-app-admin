@@ -34,7 +34,7 @@ const DataTable = ({ columns }) => {
 
   const handleDelete = async (id) => {
     if (window.confirm(
-      `Are you sure you want to delete this ${path === 'users' ? 'user' : 'hotel'}`
+      `Are you sure you want to delete this ${path === 'users' ? 'user' : 'hotel' ? 'room' : ''}`
     )) {
       await deleteData(id);
     }
