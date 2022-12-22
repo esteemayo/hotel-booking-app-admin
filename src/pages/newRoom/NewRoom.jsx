@@ -13,8 +13,14 @@ const NewRoom = () => {
 
   const { data, loading } = useFetch('/hotels');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      // 
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
