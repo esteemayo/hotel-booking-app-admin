@@ -44,14 +44,19 @@ const NewRoom = () => {
               })}
               <div className='form-input'>
                 <label htmlFor='hotelId'>Choose a hotel</label>
-                <select id='hotelId' name='hotelId' onChange={(e) => setHotelId(e.target.value)}>
-                  {loading ? 'loading' : (
-                    data?.hotels?.map((item) => {
-                      return (
-                        <option key={item._id} value={item._id}>{item.name}</option>
-                      );
-                    })
-                  )}
+                <select
+                  id='hotelId'
+                  name='hotelId'
+                  onChange={(e) => setHotelId(e.target.value)}
+                >
+                  {loading
+                    ? 'loading' : (
+                      data?.hotels?.map((item) => {
+                        return (
+                          <option key={item._id} value={item._id}>{item.name}</option>
+                        );
+                      })
+                    )}
                 </select>
               </div>
               <button type='submit'>Send</button>
