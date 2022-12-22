@@ -107,6 +107,11 @@
             background-color: transparent;
             color: var(--color-gray-light);
             border-bottom: 1px solid gray;
+
+            & > * {
+              background-color: #f9f9f9;
+              color: var(--color-gray-dark);
+            }
           }
         }
 
