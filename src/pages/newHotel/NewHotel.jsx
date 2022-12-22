@@ -34,6 +34,11 @@ const NewHotel = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    await handleCreate();
+    await navigate('/hotels');
+  };
+
+  const handleCreate = async () => {
     try {
       const list = await Promise.all(
         Object.values(files).map(async (file) => {
@@ -53,7 +58,6 @@ const NewHotel = () => {
       };
 
       await createHotel({ ...newHotel });
-      navigate('/hotels');
     } catch (err) {
       console.log(err);
     }
