@@ -63,7 +63,7 @@ const Home = () => {
             data={userStats}
             dataKey={'Active User'}
             aspect={2 / 1}
-            title='Last 6 Months (Revenue)'
+            title='User Statistics'
           />
         </div>
         <div className='list-container'>
