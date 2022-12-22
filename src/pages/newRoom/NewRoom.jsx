@@ -8,6 +8,7 @@ import Sidebar from 'components/sidebar/Sidebar';
 import './newRoom.scss';
 
 const NewRoom = () => {
+  const [rooms, setRooms] = useState([]);
   const [values, setValues] = useState(null);
   const [hotelId, setHotelId] = useState(null);
 
