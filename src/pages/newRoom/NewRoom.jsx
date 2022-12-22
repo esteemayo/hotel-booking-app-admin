@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { roomInputs } from 'formData';
+import useFetch from 'hooks/useFetch';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
 
@@ -8,6 +9,8 @@ import './newRoom.scss';
 
 const NewRoom = () => {
   const [values, setValues] = useState(null);
+
+  const { data, loading } = useFetch('/rooms');
 
   const handleSubmit = (e) => {
     e.preventDefault();
