@@ -44,7 +44,7 @@ const NewRoom = () => {
               })}
               <div className='form-input'>
                 <label htmlFor='hotelId'>Choose a hotel</label>
-                <select id='hotelId' name='hotelId'>
+                <select id='hotelId' name='hotelId' onChange={(e) => setHotelId(e.target.value)}>
                   {loading ? 'loading' : (
                     data?.hotels?.map((item) => {
                       return (
