@@ -10,7 +10,7 @@ import './newRoom.scss';
 const NewRoom = () => {
   const [values, setValues] = useState(null);
 
-  const { data, loading } = useFetch('/rooms');
+  const { data, loading } = useFetch('/hotels');
 
   const handleSubmit = (e) => {
     e.preventDefault();
