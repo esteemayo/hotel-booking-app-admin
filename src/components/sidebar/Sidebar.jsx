@@ -32,10 +32,12 @@ const Sidebar = () => {
       <div className='center'>
         <ul>
           <p className='title'>Main</p>
-          <li>
-            <Dashboard className='icon' />
-            <span>Dashboard</span>
-          </li>
+          <Link to='/' className='link'>
+            <li>
+              <Dashboard className='icon' />
+              <span>Dashboard</span>
+            </li>
+          </Link>
           <p className='title'>Lists</p>
           <Link to='/users' className='link'>
             <li>
