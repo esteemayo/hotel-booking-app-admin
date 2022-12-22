@@ -56,7 +56,7 @@ const NewRoom = () => {
                 );
               })}
 
-              <button>Send</button>
+              <button type='submit'>Send</button>
             </form>
           </div>
         </div>
