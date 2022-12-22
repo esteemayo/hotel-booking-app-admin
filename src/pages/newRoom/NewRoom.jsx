@@ -51,7 +51,12 @@ const NewRoom = () => {
                 return (
                   <div className='form-input' key={id}>
                     <label htmlFor={id}>{label}</label>
-                    <input type={type} id={name} placeholder={placeholder} />
+                    <input
+                      id={name}
+                      name={name}
+                      type={type}
+                      placeholder={placeholder}
+                    />
                   </div>
                 );
               })}
