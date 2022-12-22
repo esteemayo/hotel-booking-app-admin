@@ -12,6 +12,7 @@ import './newHotel.scss';
 
 const NewHotel = () => {
   const [rooms, setRooms] = useState([]);
+  const navigate = useNavigate();
   const [files, setFiles] = useState(null);
   const [formData, setFormData] = useState(null);
 
