@@ -53,6 +53,7 @@ const NewHotel = () => {
       };
 
       await createHotel({ ...newHotel });
+      navigate('/hotels');
     } catch (err) {
       console.log(err);
     }
