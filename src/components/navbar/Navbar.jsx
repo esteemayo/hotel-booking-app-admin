@@ -53,7 +53,7 @@ const Navbar = () => {
           </div>
           <div className='item'>
             <img
-              src='https://images.pexels.com/photos/11293709/pexels-photo-11293709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+              src={user.img ?? 'https://i.ibb.co/MBtjqXQ/no-avatar.gif'}
               alt='avatar'
               className='avatar'
             />
