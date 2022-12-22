@@ -49,6 +49,10 @@ const NewRoom = () => {
                 );
               })}
               <div className='form-input'>
+                <label htmlFor='rooms'>Rooms</label>
+                <textarea name='' id='' placeholder='give comma between room numbers.'></textarea>
+              </div>
+              <div className='form-input'>
                 <label htmlFor='hotelId'>Choose a hotel</label>
                 <select
                   id='hotelId'
