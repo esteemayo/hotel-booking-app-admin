@@ -24,6 +24,11 @@ const Sidebar = () => {
   const { logout } = useGlobalAuthContext();
   const { dark, light } = useGlobalContext();
 
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
   return (
     <div className='sidebar'>
       <div className='top'>
