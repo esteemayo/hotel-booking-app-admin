@@ -89,6 +89,13 @@
           color: gray;
         }
       }
+
+      select {
+        & > * {
+          background-color: #222;
+          color: var(--color-gray-light);
+        }
+      }
     }
   }
 
