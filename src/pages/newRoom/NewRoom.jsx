@@ -59,6 +59,7 @@ const NewRoom = () => {
                       id={name}
                       name={name}
                       type={type}
+                      onChange={handleChange}
                       placeholder={placeholder}
                     />
                   </div>
