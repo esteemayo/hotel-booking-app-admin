@@ -87,6 +87,11 @@
             border-bottom: 1px solid gray;
             caret-color: #7451f8;
             resize: none;
+
+            &::placeholder {
+              color: #bbb;
+              font-size: 1.2rem;
+            }
           }
 
           select {
