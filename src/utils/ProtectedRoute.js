@@ -1,11 +1,10 @@
-import { Navigate } from 'react-router-dom';
+import LoadingToRedirect from './LoadingToRedirect';
 import { useGlobalAuthContext } from 'context/auth/AuthContext';
-
 
 const ProtectedRoute = ({ children }) => {
   const { user } = useGlobalAuthContext();
 
-  return !user ? <Navigate to='/login' /> : children;
+  return !user ? <LoadingToRedirect /> : children;
 };
 
 export default ProtectedRoute;
