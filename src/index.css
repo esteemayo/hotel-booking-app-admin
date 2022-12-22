@@ -34,3 +34,9 @@ body {
 .link:visited {
   text-decoration: none;
 }
+
+.redirect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
