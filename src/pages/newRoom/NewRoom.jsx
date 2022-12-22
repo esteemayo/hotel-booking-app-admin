@@ -4,6 +4,7 @@ import { roomInputs } from 'formData';
 import useFetch from 'hooks/useFetch';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
+import { createRoom } from 'services/roomService';
 
 import './newRoom.scss';
 import { createRoom } from 'services/roomService';
