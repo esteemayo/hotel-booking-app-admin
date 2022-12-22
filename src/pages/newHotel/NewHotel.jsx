@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
 
 import useFetch from 'hooks/useFetch';
@@ -11,8 +12,8 @@ import { uploadImage } from 'services/imageService';
 import './newHotel.scss';
 
 const NewHotel = () => {
-  const [rooms, setRooms] = useState([]);
   const navigate = useNavigate();
+  const [rooms, setRooms] = useState([]);
   const [files, setFiles] = useState(null);
   const [formData, setFormData] = useState(null);
 
@@ -30,8 +31,31 @@ const NewHotel = () => {
     setRooms(value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      const list = await Promise.all(
+        Object.values(files).map(async (file) => {
+          const form = new FormData();
+          form.append('file', file);
+          form.append('upload_preset', 'booking');
+
+          const { data } = await uploadImage(form);
+          const { url } = data;
+          return url;
+        }));
+
+      const newHotel = {
+        ...formData,
+        rooms,
+        photos: list,
+      };
+
+      await createHotel({ ...newHotel });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
