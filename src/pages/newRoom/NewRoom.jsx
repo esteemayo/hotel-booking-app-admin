@@ -19,7 +19,7 @@ const NewRoom = ({ inputs, title }) => {
       <div className='new-container'>
         <Navbar />
         <div className='top'>
-          <h1>{title}</h1>
+          <h1>Add new room</h1>
         </div>
         <div className='bottom'>
           <div className='left'>
