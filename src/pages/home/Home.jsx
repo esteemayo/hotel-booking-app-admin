@@ -12,6 +12,8 @@ import './home.scss';
 
 const Home = () => {
   const [userStats, setUserStats] = useState([]);
+  const { data } = useFetch('/users/stats');
+  console.log(data);
 
   return (
     <div className='home'>
