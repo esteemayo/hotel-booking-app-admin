@@ -48,8 +48,10 @@ const DataTable = ({ columns }) => {
 
       if (path === 'users') {
         await deleteUser(id);
-      } else {
+      } else if (path === 'hotels') {
         await deleteHotel(id);
+      } else {
+        await deleteRoom(id);
       }
     } catch (err) {
       console.log(err);
