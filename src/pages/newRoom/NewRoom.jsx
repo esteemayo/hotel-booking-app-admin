@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { DriveFolderUploadOutlined } from '@mui/icons-material';
 
 import { roomInputs } from 'formData';
 import Navbar from 'components/navbar/Navbar';
@@ -8,7 +7,6 @@ import Sidebar from 'components/sidebar/Sidebar';
 import './newRoom.scss';
 
 const NewRoom = () => {
-  const [file, setFile] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,17 +23,6 @@ const NewRoom = () => {
         <div className='bottom'>
           <div className='right'>
             <form onSubmit={handleSubmit}>
-              <div className='form-input'>
-                <label htmlFor='file'>
-                  Image: <DriveFolderUploadOutlined className='icon' />
-                </label>
-                <input
-                  type='file'
-                  id='file'
-                  onChange={(e) => setFile(e.target.files[0])}
-                  style={{ display: 'none' }}
-                />
-              </div>
               {roomInputs.map((item) => {
                 const { id, name, type, label, placeholder } = item;
                 return (
