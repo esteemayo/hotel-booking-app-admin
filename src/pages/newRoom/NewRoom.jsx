@@ -25,6 +25,11 @@ const NewRoom = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    await handleCreate();
+    await navigate('/rooms');
+  };
+
+  const handleCreate = async () => {
     const roomNumbers = rooms.split(',').map((item) => ({ number: item }));
     const newRoom = {
       ...values,
@@ -33,7 +38,6 @@ const NewRoom = () => {
 
     try {
       await createRoom(hotelId, newRoom);
-      navigate('/rooms');
     } catch (err) {
       console.log(err);
     }
