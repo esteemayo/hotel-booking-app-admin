@@ -7,7 +7,7 @@ import Sidebar from 'components/sidebar/Sidebar';
 
 import './newRoom.scss';
 
-const NewRoom = ({ inputs, title }) => {
+const NewRoom = () => {
   const [file, setFile] = useState('');
 
   const handleSubmit = (e) => {
