@@ -7,6 +7,7 @@ import Sidebar from 'components/sidebar/Sidebar';
 import './newRoom.scss';
 
 const NewRoom = () => {
+  const [values, setValues] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
