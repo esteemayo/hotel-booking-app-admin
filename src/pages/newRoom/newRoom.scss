@@ -76,6 +76,13 @@
             }
           }
 
+          textarea {
+            border: none;
+            outline: none;
+            display: inline-block;
+            font-family: inherit;
+          }
+
           select {
             border: none;
             outline: none;
