@@ -35,7 +35,13 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path='login' element={<Login inputs={loginInputs} />} />
+            <Route path='login'
+              element={
+                <AuthRoute>
+                  <Login inputs={loginInputs} />
+                </AuthRoute>
+              }
+            />
             <Route path='users' element={<Layout />}>
               <Route index
                 element={
