@@ -6,6 +6,15 @@ import Sidebar from 'components/sidebar/Sidebar';
 import './single.scss';
 
 const Single = () => {
+  const data = [
+    { name: 'January', Total: 1200 },
+    { name: 'February', Total: 2100 },
+    { name: 'March', Total: 800 },
+    { name: 'April', Total: 1600 },
+    { name: 'May', Total: 900 },
+    { name: 'June', Total: 1700 },
+  ];
+
   return (
     <div className='single'>
       <Sidebar />
@@ -45,7 +54,7 @@ const Single = () => {
             </div>
           </div>
           <div className='right'>
-            <Chart aspect={3 / 1} title='User Spending (Last 6 Months)' />
+            <Chart data={data} aspect={3 / 1} title='User Spending (Last 6 Months)' />
           </div>
         </div>
         <div className='bottom'>
