@@ -12,7 +12,6 @@ import './home.scss';
 
 const Home = () => {
   const [userStats, setUserStats] = useState([]);
-  console.log('Stats : ', userStats)
 
   const MONTHS = useMemo(() =>
     [
@@ -60,9 +59,9 @@ const Home = () => {
         <div className='charts'>
           <Featured />
           <Chart
+            aspect={2 / 1}
             data={userStats}
             dataKey={'Active User'}
-            aspect={2 / 1}
             title='User Statistics'
           />
         </div>
