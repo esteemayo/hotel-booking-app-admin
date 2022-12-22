@@ -14,6 +14,33 @@ const Home = () => {
   const [userStats, setUserStats] = useState([]);
   const { data } = useFetch('/users/stats');
   console.log(data);
+  console.log('Stats : ', userStats)
+
+  const MONTHS = useMemo(() =>
+    [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec'
+    ],
+    []);
+
+  useEffect(() => {
+    (() => {
+      data.stats.map((item) =>
+        setUserStats((prev) =>
+          [...prev, { name: MONTHS[item._id - 1], 'Active User': item.total }]
+        ));
+    })();
+  }, [MONTHS, data.stats]);
 
   return (
     <div className='home'>
