@@ -17,6 +17,11 @@ const NewRoom = () => {
 
   const { data, loading } = useFetch('/hotels');
 
+  const handleChange = ({ target: input }) => {
+    const { id, value } = input;
+    setValues((prev) => ({ ...prev, [id]: value }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
