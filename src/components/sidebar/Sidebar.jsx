@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   AccountCircleOutlined,
   CreditCard,
@@ -20,6 +20,7 @@ import { useGlobalContext } from 'context/darkmode/DarkModeContext';
 import './sidebar.scss';
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   const { logout } = useGlobalAuthContext();
   const { dark, light } = useGlobalContext();
 
