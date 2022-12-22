@@ -9,6 +9,7 @@ import './newRoom.scss';
 
 const NewRoom = () => {
   const [values, setValues] = useState(null);
+  const [hotelId, setHotelId] = useState(null);
 
   const { data, loading } = useFetch('/hotels');
 
