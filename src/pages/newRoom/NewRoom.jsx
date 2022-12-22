@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
 
+import { roomInputs } from 'formData';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
 
@@ -45,7 +46,7 @@ const NewRoom = ({ inputs, title }) => {
                   style={{ display: 'none' }}
                 />
               </div>
-              {inputs.map((item) => {
+              {roomInputs.map((item) => {
                 const { id, name, type, label, placeholder } = item;
                 return (
                   <div className='form-input' key={id}>
