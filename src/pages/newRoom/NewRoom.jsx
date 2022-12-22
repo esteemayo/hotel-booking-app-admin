@@ -93,7 +93,9 @@ const NewRoom = () => {
                     )}
                 </select>
               </div>
-              <button type='submit'>Send</button>
+              <div className='form-input'>
+                <button type='submit'>Send</button>
+              </div>
             </form>
           </div>
         </div>
