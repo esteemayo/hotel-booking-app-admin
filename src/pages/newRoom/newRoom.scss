@@ -84,6 +84,8 @@
             width: 100%;
             background-color: transparent;
             color: var(--color-gray-light);
+            border-bottom: 1px solid gray;
+            caret-color: #7451f8;
           }
 
           select {
