@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import List from 'components/table/Table';
 import Chart from 'components/chart/Chart';
 import Navbar from 'components/navbar/Navbar';
@@ -8,6 +10,8 @@ import Featured from 'components/featured/Featured';
 import './home.scss';
 
 const Home = () => {
+  const [userStats, setUserStats] = useState([]);
+
   return (
     <div className='home'>
       <Sidebar />
