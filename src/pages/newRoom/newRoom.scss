@@ -62,8 +62,11 @@
             border: none;
             outline: none;
             display: inline-block;
+            font-family: inherit;
             width: 100%;
             padding: 0.5rem;
+            background-color: transparent;
+            color: var(--color-gray-light);
             border-bottom: 1px solid gray;
             caret-color: #7451f8;
 
