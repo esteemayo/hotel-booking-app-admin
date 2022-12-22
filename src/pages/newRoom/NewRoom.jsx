@@ -6,6 +6,7 @@ import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
 
 import './newRoom.scss';
+import { createRoom } from 'services/roomService';
 
 const NewRoom = () => {
   const [rooms, setRooms] = useState([]);
