@@ -54,7 +54,6 @@ const NewRoom = () => {
                   )}
                 </select>
               </div>
-
               <button type='submit'>Send</button>
             </form>
           </div>
