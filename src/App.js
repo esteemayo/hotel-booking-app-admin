@@ -68,6 +68,13 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route path=':userId/update'
+                element={
+                  <ProtectedRoute>
+                    <UpdateUser inputs={userInputs} title='Update user' />
+                  </ProtectedRoute>
+                }
+              />
             </Route>
             <Route path='hotels' element={<Layout />}>
               <Route index
