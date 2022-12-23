@@ -10,6 +10,7 @@ import TableContainer from '@mui/material/TableContainer';
 import './table.scss';
 
 const List = () => {
+  const { data } = useFetch('/users?new');
   const rows = [
     {
       id: 1143155,
