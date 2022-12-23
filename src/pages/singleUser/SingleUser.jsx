@@ -23,8 +23,8 @@ const SingleUser = () => {
             <h1 className='title'>Information</h1>
             <div className='item'>
               <img
-                src='https://i.ibb.co/MBtjqXQ/no-avatar.gif'
-                alt=''
+                src={state.img ?? 'https://i.ibb.co/MBtjqXQ/no-avatar.gif'}
+                alt='avatar'
                 className='item-img'
               />
               <div className='details'>
