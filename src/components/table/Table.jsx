@@ -119,7 +119,7 @@ const List = () => {
                 {row.country}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
-                {row.method}
+                {row.role}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
                 <span className={`status ${row.status}`}>{row.status}</span>
