@@ -7,6 +7,7 @@ import NewRoom from './newRoom/NewRoom';
 import NewUser from './newUser/NewUser';
 import NotFound from './notFound/NotFound';
 import SharedLayout from './Layout/SharedLayout';
+import SingleHotel from './singleHotel/SingleHotel';
 import SingleUser from './singleUser/SingleUser';
 
 export {
@@ -19,5 +20,6 @@ export {
   NewUser,
   NotFound,
   SharedLayout,
+  SingleHotel,
   SingleUser,
 };
