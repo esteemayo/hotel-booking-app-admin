@@ -87,7 +87,7 @@ const List = () => {
               Amount
             </TableCell>
             <TableCell className='table-cell' style={{ fontSize: '1.6rem' }}>
-              Payment Method
+              Email Address
             </TableCell>
             <TableCell className='table-cell' style={{ fontSize: '1.6rem' }}>
               Status
