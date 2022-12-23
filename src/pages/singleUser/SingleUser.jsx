@@ -39,9 +39,7 @@ const SingleUser = () => {
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>City:</span>
-                  <span className='item-value'>
-                    Elton St. 234 Garden Yd. NewYork
-                  </span>
+                  <span className='item-value'>{state.city}</span>
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Country:</span>
