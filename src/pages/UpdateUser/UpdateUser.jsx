@@ -93,8 +93,8 @@ const UpdateUser = ({ inputs, title }) => {
                 <input
                   type='file'
                   id='file'
-                  onChange={(e) => setFile(e.target.files[0])}
                   style={{ display: 'none' }}
+                  onChange={(e) => setFile(e.target.files[0])}
                 />
               </div>
               {inputs.map((item) => {
