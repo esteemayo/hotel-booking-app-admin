@@ -105,7 +105,7 @@ const List = () => {
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
                 <div className='cell-wrapper'>
-                  <img src={row.img} alt='' className='image' />
+                  <img src={row.img} alt={row.username} className='image' />
                   {row.product}
                 </div>
               </TableCell>
