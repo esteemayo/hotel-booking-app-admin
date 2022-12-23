@@ -11,7 +11,9 @@ import './updateUser.scss';
 
 const UpdateUser = ({ inputs, title }) => {
   const navigate = useNavigate();
-  const { hash } = useLocation();
+  const { pathname } = useLocation();
+  const userId = pathname.split('/')[2];
+
   const [file, setFile] = useState('');
   const [info, setInfo] = useState({});
 
