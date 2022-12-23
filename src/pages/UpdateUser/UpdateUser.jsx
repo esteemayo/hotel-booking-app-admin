@@ -25,6 +25,11 @@ const UpdateUser = ({ inputs, title }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    await handleUpdate();
+    await navigate('/users');
+  };
+
+  const handleUpdate = async () => {
     const credentials = {
       ...info,
     }
@@ -41,7 +46,6 @@ const UpdateUser = ({ inputs, title }) => {
       }
 
       await createUser({ ...credentials });
-      navigate('/users');
     } catch (err) {
       console.log(err);
     }
