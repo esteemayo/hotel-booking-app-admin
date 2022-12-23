@@ -113,7 +113,6 @@ const UpdateUser = ({ inputs, title }) => {
                   </div>
                 );
               })}
-
               <button type='submit'>Update</button>
             </form>
           </div>
