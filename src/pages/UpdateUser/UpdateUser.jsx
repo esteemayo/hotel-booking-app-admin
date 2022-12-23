@@ -15,14 +15,7 @@ const UpdateUser = ({ inputs, title }) => {
   const userId = pathname.split('/')[2];
 
   const [file, setFile] = useState('');
-  const [info, setInfo] = useState({
-    name: '',
-    username: '',
-    email: '',
-    country: '',
-    phone: '',
-    city: '',
-  });
+  const [info, setInfo] = useState({});
 
   const handleChange = ({ target: input }) => {
     const { name, value } = input;
