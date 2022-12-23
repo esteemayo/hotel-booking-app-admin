@@ -66,7 +66,7 @@ const Home = () => {
           />
         </div>
         <div className='list-container'>
-          <div className='list-title'>Latest transactions</div>
+          <div className='list-title'>Latest users</div>
           <List />
         </div>
       </div>
