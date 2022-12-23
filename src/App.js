@@ -71,7 +71,7 @@ function App() {
               <Route path=':userId/update'
                 element={
                   <ProtectedRoute>
-                    <UpdateUser inputs={updateUserInputs} title='Update user' />
+                    <UpdateUser inputs={updateUserInputs} />
                   </ProtectedRoute>
                 }
               />
