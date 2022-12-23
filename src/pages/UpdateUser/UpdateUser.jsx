@@ -18,6 +18,9 @@ const UpdateUser = ({ inputs, title }) => {
   const [file, setFile] = useState('');
   const [info, setInfo] = useState({});
 
+  const { data } = useFetch(`/users/${userId}`);
+  console.log(data);
+
   const handleChange = ({ target: input }) => {
     const { name, value } = input;
     setInfo((prev) => ({ ...prev, [name]: value }));
