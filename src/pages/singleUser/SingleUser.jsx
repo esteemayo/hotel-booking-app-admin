@@ -6,7 +6,7 @@ import Chart from 'components/chart/Chart';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
 
-import './single.scss';
+import './singleUser.scss';
 
 const SingleUser = () => {
   const { state } = useLocation();
