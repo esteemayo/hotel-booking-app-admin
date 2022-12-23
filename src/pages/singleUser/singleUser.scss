@@ -35,6 +35,11 @@
               text-decoration: none;
               color: inherit;
             }
+
+            &:active,
+            &:hover {
+              color: currentColor;
+            }
           }
         }
 
