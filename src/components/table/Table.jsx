@@ -11,7 +11,6 @@ import './table.scss';
 
 const List = () => {
   const { data } = useFetch('/users?new=true');
-  console.log(data)
 
   return (
     <TableContainer component={Paper} className='table'>
