@@ -8,6 +8,7 @@ import NewUser from './newUser/NewUser';
 import NotFound from './notFound/NotFound';
 import SharedLayout from './Layout/SharedLayout';
 import SingleHotel from './singleHotel/SingleHotel';
+import SingleRoom from './singleRoom/SingleRoom';
 import SingleUser from './singleUser/SingleUser';
 
 export {
@@ -21,5 +22,6 @@ export {
   NotFound,
   SharedLayout,
   SingleHotel,
+  SingleRoom,
   SingleUser,
 };
