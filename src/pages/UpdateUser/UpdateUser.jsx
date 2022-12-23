@@ -18,12 +18,12 @@ const UpdateUser = ({ inputs, title }) => {
 
   const [file, setFile] = useState('');
   const [info, setInfo] = useState({
-    name: '',
-    username: '',
-    email: '',
-    country: '',
-    phone: '',
-    city: '',
+    name: data.user.name || '',
+    username: data.user.username || '',
+    email: data.user.email || '',
+    country: data.user.country || '',
+    phone: data.user.phone || '',
+    city: data.user.city || '',
   });
 
   const handleChange = ({ target: input }) => {
