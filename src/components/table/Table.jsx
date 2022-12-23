@@ -101,7 +101,7 @@ const List = () => {
           {data?.users?.map((row) => (
             <TableRow key={row.id}>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
-                {row.id}
+                {row._id}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
                 <div className='cell-wrapper'>
