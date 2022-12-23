@@ -114,7 +114,7 @@ const UpdateUser = ({ inputs, title }) => {
                 );
               })}
 
-              <button type='submit'>Send</button>
+              <button type='submit'>Update</button>
             </form>
           </div>
         </div>
