@@ -78,7 +78,7 @@ const List = () => {
               Name
             </TableCell>
             <TableCell className='table-cell' style={{ fontSize: '1.6rem' }}>
-              Customer
+              Username
             </TableCell>
             <TableCell className='table-cell' style={{ fontSize: '1.6rem' }}>
               Date
