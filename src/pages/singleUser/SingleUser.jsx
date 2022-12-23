@@ -43,7 +43,7 @@ const SingleUser = () => {
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Country:</span>
-                  <span className='item-value'>USA</span>
+                  <span className='item-value'>{state.country}</span>
                 </div>
               </div>
             </div>
