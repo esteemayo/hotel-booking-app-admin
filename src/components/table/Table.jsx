@@ -116,7 +116,7 @@ const List = () => {
                 {row.createdAt}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
-                {row.amount}
+                {row.country}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
                 {row.method}
