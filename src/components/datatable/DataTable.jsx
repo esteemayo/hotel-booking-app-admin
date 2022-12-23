@@ -66,7 +66,7 @@ const DataTable = ({ columns }) => {
       renderCell: (params) => {
         return (
           <div className='cell-action'>
-            <Link to={`/${path}/${params.row._id}`} state={params}>
+            <Link to={`/${path}/${params.row._id}`} state={params.row}>
               <button className='view-button'>View</button>
             </Link>
             <button
