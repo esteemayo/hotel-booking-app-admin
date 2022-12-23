@@ -15,7 +15,7 @@ import {
   NewUser,
   NotFound,
   SharedLayout,
-  Single,
+  SingleUser,
 } from 'pages';
 
 import './style/dark.scss';
@@ -53,7 +53,7 @@ function App() {
               <Route path=':userId'
                 element={
                   <ProtectedRoute>
-                    <Single />
+                    <SingleUser />
                   </ProtectedRoute>
                 }
               />
