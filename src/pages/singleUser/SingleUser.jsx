@@ -31,7 +31,7 @@ const SingleUser = () => {
                 <h1 className='item-title'>{state.name}</h1>
                 <div className='detail-item'>
                   <span className='item-key'>Email:</span>
-                  <span className='item-value'>janedoe@gmail.com</span>
+                  <span className='item-value'>{state.email}</span>
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Phone:</span>
