@@ -5,7 +5,7 @@ import { DriveFolderUploadOutlined } from '@mui/icons-material';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
 import { uploadImage } from 'services/imageService';
-import { createUser, getUser, updateUser } from 'services/userService';
+import { getUser, updateUser } from 'services/userService';
 
 import './updateUser.scss';
 
