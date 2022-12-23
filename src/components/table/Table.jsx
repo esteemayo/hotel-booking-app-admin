@@ -11,6 +11,7 @@ import './table.scss';
 
 const List = () => {
   const { data } = useFetch('/users?new');
+  console.log(data)
 
   const rows = [
     {
@@ -71,7 +72,7 @@ const List = () => {
         <TableHead>
           <TableRow>
             <TableCell className='table-cell' style={{ fontSize: '1.6rem' }}>
-              Tracking ID
+              User ID
             </TableCell>
             <TableCell className='table-cell' style={{ fontSize: '1.6rem' }}>
               Product
