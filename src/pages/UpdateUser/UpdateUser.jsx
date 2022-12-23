@@ -59,7 +59,6 @@ const UpdateUser = ({ inputs, title }) => {
       try {
         const { data } = await getUser(userId);
         setInfo({ ...data.user });
-        console.log(data);
       } catch (err) {
         console.log(err);
       }
