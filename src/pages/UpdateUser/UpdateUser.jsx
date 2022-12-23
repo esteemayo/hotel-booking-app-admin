@@ -30,7 +30,7 @@ const UpdateUser = ({ inputs, title }) => {
   };
 
   const handleUpdate = async () => {
-    const credentials = {
+    const userData = {
       ...info,
     }
 
@@ -42,10 +42,10 @@ const UpdateUser = ({ inputs, title }) => {
       if (file) {
         const { data } = await uploadImage(form);
         const { url } = data;
-        credentials.img = url;
+        userData.img = url;
       }
 
-      await createUser({ ...credentials });
+      await updateUser(userId, userData);
     } catch (err) {
       console.log(err);
     }
