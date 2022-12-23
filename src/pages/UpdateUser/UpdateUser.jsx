@@ -81,7 +81,7 @@ const UpdateUser = ({ inputs, title }) => {
                   ? URL.createObjectURL(file)
                   : 'https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg'
               }
-              alt=''
+              alt='avatar'
             />
           </div>
           <div className='right'>
