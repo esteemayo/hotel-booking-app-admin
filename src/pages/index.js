@@ -7,7 +7,7 @@ import NewRoom from './newRoom/NewRoom';
 import NewUser from './newUser/NewUser';
 import NotFound from './notFound/NotFound';
 import SharedLayout from './Layout/SharedLayout';
-import Single from './single/Single';
+import SingleUser from './singleUser/SingleUser';
 
 export {
   Home,
@@ -19,5 +19,5 @@ export {
   NewUser,
   NotFound,
   SharedLayout,
-  Single,
+  SingleUser,
 };
