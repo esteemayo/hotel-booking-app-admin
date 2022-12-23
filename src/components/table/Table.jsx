@@ -125,7 +125,7 @@ const List = () => {
                 {row.email}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
-                <span className={`status ${row.status}`}>{row.status}</span>
+                <span className={`status`}>{row.status}</span>
               </TableCell>
             </TableRow>
           ))}
