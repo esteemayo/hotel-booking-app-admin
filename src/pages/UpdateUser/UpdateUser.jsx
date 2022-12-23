@@ -16,7 +16,14 @@ const UpdateUser = ({ inputs, title }) => {
   const userId = pathname.split('/')[2];
 
   const [file, setFile] = useState('');
-  const [info, setInfo] = useState({});
+  const [info, setInfo] = useState({
+    name: '',
+    username: '',
+    email: '',
+    country: '',
+    phone: '',
+    city: '',
+  });
 
   const { data } = useFetch(`/users/${userId}`);
   console.log(data);
