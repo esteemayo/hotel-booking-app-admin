@@ -10,6 +10,7 @@ import SharedLayout from './Layout/SharedLayout';
 import SingleHotel from './singleHotel/SingleHotel';
 import SingleRoom from './singleRoom/SingleRoom';
 import SingleUser from './singleUser/SingleUser';
+import UpdateUser from './UpdateUser/UpdateUser';
 
 export {
   Home,
@@ -24,4 +25,5 @@ export {
   SingleHotel,
   SingleRoom,
   SingleUser,
+  UpdateUser,
 };
