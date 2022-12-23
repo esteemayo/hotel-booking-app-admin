@@ -4,6 +4,7 @@ import AuthRoute from 'utils/AuthRoute';
 import ProtectedRoute from 'utils/ProtectedRoute';
 import { loginInputs, userInputs } from 'formData';
 import { hotelColumns, roomColumns, userColumns } from 'data';
+import { loginInputs, updateUserInputs, userInputs } from 'formData';
 import { useGlobalContext } from 'context/darkmode/DarkModeContext';
 import {
   Home,
