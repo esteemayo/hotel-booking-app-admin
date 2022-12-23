@@ -10,7 +10,6 @@ import './singleUser.scss';
 
 const SingleUser = () => {
   const { state } = useLocation();
-  console.log(state)
 
   return (
     <div className='single'>
