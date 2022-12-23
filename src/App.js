@@ -18,6 +18,7 @@ import {
   SingleHotel,
   SingleRoom,
   SingleUser,
+  UpdateUser,
 } from 'pages';
 
 import './style/dark.scss';
