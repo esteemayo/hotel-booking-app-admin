@@ -51,7 +51,11 @@ const List = () => {
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
                 <div className='cell-wrapper'>
-                  <img src={row.img} alt={row.username ?? 'https://i.ibb.co/MBtjqXQ/no-avatar.gif'} className='image' />
+                  <img
+                    src={row.img}
+                    alt={row.username ?? 'https://i.ibb.co/MBtjqXQ/no-avatar.gif'}
+                    className='image'
+                  />
                   {row.name}
                 </div>
               </TableCell>
