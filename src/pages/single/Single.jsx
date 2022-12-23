@@ -1,3 +1,5 @@
+import { useLocation } from 'react-router-dom';
+
 import { data } from 'data';
 import List from 'components/table/Table';
 import Chart from 'components/chart/Chart';
@@ -7,6 +9,7 @@ import Sidebar from 'components/sidebar/Sidebar';
 import './single.scss';
 
 const Single = () => {
+  const { state } = useLocation();
 
   return (
     <div className='single'>
