@@ -113,7 +113,7 @@ const List = () => {
                 {row.username}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
-                {row.date}
+                {row.createdAt}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
                 {row.amount}
