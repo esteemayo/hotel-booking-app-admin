@@ -27,6 +27,14 @@
           background-color: #7551f818;
           border-radius: 0 0 0 0.5rem;
           cursor: pointer;
+
+          .edit-link {
+            &,
+            &:link,
+            &:visited {
+              text-decoration: none;
+            }
+          }
         }
 
         .item {
