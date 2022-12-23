@@ -19,7 +19,9 @@ const SingleUser = () => {
         <Navbar />
         <div className='top'>
           <div className='left'>
-            <div className='edit-button'>Edit</div>
+            <div className='edit-button'>
+              Edit
+            </div>
             <h1 className='title'>Information</h1>
             <div className='item'>
               <img
