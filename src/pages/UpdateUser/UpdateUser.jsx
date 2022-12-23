@@ -14,6 +14,7 @@ const UpdateUser = ({ inputs, title }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const userId = pathname.split('/')[2];
+  const { data } = useFetch(`/users/${userId}`);
 
   const [file, setFile] = useState('');
   const [info, setInfo] = useState({
@@ -24,9 +25,6 @@ const UpdateUser = ({ inputs, title }) => {
     phone: '',
     city: '',
   });
-
-  const { data } = useFetch(`/users/${userId}`);
-  console.log(data);
 
   const handleChange = ({ target: input }) => {
     const { name, value } = input;
