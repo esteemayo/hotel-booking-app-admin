@@ -54,6 +54,17 @@ const UpdateUser = ({ inputs, title }) => {
     }
   };
 
+  useEffect(() => {
+    (async () => {
+      try {
+        const { data } = await getUser(userId);
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      }
+    })();
+  }, [userId]);
+
   return (
     <div className='new'>
       <Sidebar />
