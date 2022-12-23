@@ -87,6 +87,9 @@ const List = () => {
               Country
             </TableCell>
             <TableCell className='table-cell' style={{ fontSize: '1.6rem' }}>
+              Role
+            </TableCell>
+            <TableCell className='table-cell' style={{ fontSize: '1.6rem' }}>
               Email Address
             </TableCell>
             <TableCell className='table-cell' style={{ fontSize: '1.6rem' }}>
