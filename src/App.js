@@ -16,6 +16,7 @@ import {
   NotFound,
   SharedLayout,
   SingleHotel,
+  SingleRoom,
   SingleUser,
 } from 'pages';
 
@@ -93,7 +94,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route path=':roomId' element={<Single />} />
+              <Route path=':roomId' element={<SingleRoom />} />
               <Route
                 path='new'
                 element={
