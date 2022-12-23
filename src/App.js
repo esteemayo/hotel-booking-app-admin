@@ -15,6 +15,7 @@ import {
   NewUser,
   NotFound,
   SharedLayout,
+  SingleHotel,
   SingleUser,
 } from 'pages';
 
@@ -74,7 +75,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route path=':hotelId' element={<Single />} />
+              <Route path=':hotelId' element={<SingleHotel />} />
               <Route
                 path='new'
                 element={
