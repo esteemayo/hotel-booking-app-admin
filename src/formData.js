@@ -98,6 +98,51 @@ export const userInputs = [
   },
 ];
 
+export const updateUserInputs = [
+  {
+    id: 'username',
+    label: 'Username',
+    type: 'text',
+    name: 'username',
+    value: '',
+  },
+  {
+    id: 'name',
+    label: 'Name',
+    type: 'text',
+    name: 'name',
+    value: '',
+  },
+  {
+    id: 'email',
+    label: 'Email',
+    type: 'email',
+    name: 'email',
+    value: '',
+  },
+  {
+    id: 'country',
+    label: 'Country',
+    type: 'text',
+    name: 'country',
+    value: '',
+  },
+  {
+    id: 'city',
+    label: 'City',
+    type: 'text',
+    name: 'city',
+    value: '',
+  },
+  {
+    id: 'phone',
+    label: 'Phone',
+    type: 'tel',
+    name: 'phone',
+    value: '',
+  },
+];
+
 export const hotelInputs = [
   {
     id: 'name',
