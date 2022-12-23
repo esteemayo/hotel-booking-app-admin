@@ -9,7 +9,7 @@ import { getUser, updateUser } from 'services/userService';
 
 import './updateUser.scss';
 
-const UpdateUser = ({ inputs, title }) => {
+const UpdateUser = ({ inputs }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const userId = pathname.split('/')[2];
@@ -68,7 +68,7 @@ const UpdateUser = ({ inputs, title }) => {
       <div className='new-container'>
         <Navbar />
         <div className='top'>
-          <h1>{title}</h1>
+          <h1>Update user</h1>
         </div>
         <div className='bottom'>
           <div className='left'>
