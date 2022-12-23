@@ -35,7 +35,7 @@ const SingleUser = () => {
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Phone:</span>
-                  <span className='item-value'>+1 2345 67 89</span>
+                  <span className='item-value'>{state.phone}</span>
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Address:</span>
