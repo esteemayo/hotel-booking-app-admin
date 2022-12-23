@@ -20,7 +20,7 @@ const SingleUser = () => {
         <div className='top'>
           <div className='left'>
             <div className='edit-button'>
-              <Link to={`/users/${state._id}/update`}>Edit</Link>
+              <Link to={`/users/${state._id}/update`} className='edit-link'>Edit</Link>
             </div>
             <h1 className='title'>Information</h1>
             <div className='item'>
