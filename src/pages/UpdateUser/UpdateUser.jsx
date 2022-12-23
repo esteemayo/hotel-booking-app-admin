@@ -106,6 +106,7 @@ const UpdateUser = ({ inputs, title }) => {
                       id={id}
                       name={name}
                       type={type}
+                      value={info[name]}
                       onChange={handleChange}
                       placeholder={placeholder}
                     />
