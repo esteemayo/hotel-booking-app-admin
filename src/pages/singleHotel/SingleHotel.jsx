@@ -55,14 +55,6 @@ const SingleHotel = () => {
               </div>
             </div>
           </div>
-          <div className='right'>
-            <Chart
-              data={data}
-              dataKey='Total'
-              aspect={3 / 1}
-              title='User Spending (Last 6 Months)'
-            />
-          </div>
         </div>
       </div>
     </div>
