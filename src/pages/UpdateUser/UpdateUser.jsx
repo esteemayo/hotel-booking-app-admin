@@ -82,7 +82,7 @@ const UpdateUser = ({ inputs }) => {
                       ? 'https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg'
                       : ''
               }
-              alt='avatar'
+              alt={info['username']}
             />
           </div>
           <div className='right'>
