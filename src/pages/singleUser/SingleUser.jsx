@@ -59,7 +59,7 @@ const SingleUser = () => {
           </div>
         </div>
         <div className='bottom'>
-          <h1 className='title'>Last Transactions</h1>
+          <h1 className='title'>Lastest Users</h1>
           <List />
         </div>
       </div>
