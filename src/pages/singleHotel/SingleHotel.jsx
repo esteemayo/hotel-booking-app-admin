@@ -51,8 +51,8 @@ const SingleHotel = () => {
                   </span>
                 </div>
                 <div className='detail-item'>
-                  <span className='item-key'>Country:</span>
-                  <span className='item-value'>USA</span>
+                  <span className='item-key'>Rating:</span>
+                  <span className='item-value'>{state.rating}</span>
                 </div>
               </div>
             </div>
