@@ -10,5 +10,8 @@ export const getHotel = (hotelId) => http.get(hotelUrl(hotelId));
 
 export const createHotel = (hotel) => http.post(apiEndpoint, hotel);
 
+export const updateHotel = (hotelId, hotel) =>
+  http.patch(hotelUrl(hotelId), hotel);
+
 export const deleteHotel = (hotelId) =>
   http.delete(hotelUrl(hotelId));
