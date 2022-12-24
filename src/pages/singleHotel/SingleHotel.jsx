@@ -27,7 +27,7 @@ const SingleHotel = () => {
                 className='item-img'
               />
               <div className='details'>
-                <h1 className='item-title'>Jane Doe</h1>
+                <h1 className='item-title'>{state.name}</h1>
                 <div className='detail-item'>
                   <span className='item-key'>Email:</span>
                   <span className='item-value'>janedoe@gmail.com</span>
