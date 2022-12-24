@@ -49,7 +49,7 @@ const List = () => {
           {data?.users?.map((user) => (
             <TableRow key={user.id}>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
-                {user._id}
+                <span className='table-user'>{user._id}</span>
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
                 <div className='cell-wrapper'>
