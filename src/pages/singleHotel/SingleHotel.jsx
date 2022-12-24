@@ -22,8 +22,8 @@ const SingleHotel = () => {
             <h1 className='title'>Information</h1>
             <div className='item'>
               <img
-                src='https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
-                alt=''
+                src={state.photos[0]}
+                alt={state.name}
                 className='item-img'
               />
               <div className='details'>
