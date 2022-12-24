@@ -35,6 +35,10 @@ const SingleHotel = () => {
                   <span className='item-value'>{state.city}</span>
                 </div>
                 <div className='detail-item'>
+                  <span className='item-key'>Price:</span>
+                  <span className='item-value'>{state.cheapestPrice}</span>
+                </div>
+                <div className='detail-item'>
                   <span className='item-key'>Address:</span>
                   <span className='item-value'>{state.address}</span>
                 </div>
