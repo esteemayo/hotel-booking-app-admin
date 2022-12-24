@@ -45,10 +45,8 @@ const SingleHotel = () => {
                   <span className='item-value'>{state.distance} km</span>
                 </div>
                 <div className='detail-item'>
-                  <span className='item-key'>Address:</span>
-                  <span className='item-value'>
-                    Elton St. 234 Garden Yd. NewYork
-                  </span>
+                  <span className='item-key'>Description:</span>
+                  <span className='item-value'>{state.desc}</span>
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Rating:</span>
