@@ -7,7 +7,6 @@ import './singleHotel.scss';
 
 const SingleHotel = () => {
   const { state } = useLocation();
-  console.log(state)
 
   return (
     <div className='single'>
