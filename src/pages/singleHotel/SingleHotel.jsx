@@ -1,7 +1,5 @@
 import { useLocation } from 'react-router-dom';
 
-import { data } from 'data';
-import Chart from 'components/chart/Chart';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
 
