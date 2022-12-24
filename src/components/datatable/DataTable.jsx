@@ -55,13 +55,22 @@ const DataTable = ({ columns }) => {
         return data.filter((item) => item._id !== id);
       });
 
-      if (path === 'users') {
-        await deleteUser(id);
-      } else if (path === 'hotels') {
-        await deleteHotel(id);
-      } else {
-        await deleteRoom(id);
-      }
+      switch (path) {
+        case 'users':
+          await deleteUser(id);
+          break;
+
+        case 'hotels':
+          await deleteHotel(id);
+          break;
+
+        case 'rooms':
+          await deleteRoom(id);
+          break;
+
+        default:
+          break;
+      };
     } catch (err) {
       console.log(err);
     }
