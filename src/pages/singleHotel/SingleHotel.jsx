@@ -52,7 +52,7 @@ const SingleHotel = () => {
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Rating:</span>
-                  <span className='item-value'>{state.rating}</span>
+                  <span className='item-value'>{state.rating.toFixed(1)}</span>
                 </div>
               </div>
             </div>
