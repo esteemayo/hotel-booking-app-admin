@@ -29,6 +29,10 @@ const SingleHotel = () => {
               <div className='details'>
                 <h1 className='item-title'>{state.name}</h1>
                 <div className='detail-item'>
+                  <span className='item-key'>City:</span>
+                  <span className='item-value'>{state.city}</span>
+                </div>
+                <div className='detail-item'>
                   <span className='item-key'>Address:</span>
                   <span className='item-value'>{state.address}</span>
                 </div>
