@@ -77,7 +77,9 @@ const List = () => {
                 {user.email}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
-                <span className={`status`}>{user.active === true ? 'Active' : 'Inactive'}</span>
+                <span className={`status`}>
+                  {user.active === true ? 'Active' : 'Inactive'}
+                </span>
               </TableCell>
             </TableRow>
           ))}
