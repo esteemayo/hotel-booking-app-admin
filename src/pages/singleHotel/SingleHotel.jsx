@@ -42,7 +42,7 @@ const SingleHotel = () => {
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Distance:</span>
-                  <span className='item-value'>{state.distance}</span>
+                  <span className='item-value'>{state.distance} km</span>
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Address:</span>
