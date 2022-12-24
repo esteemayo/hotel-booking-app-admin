@@ -65,7 +65,7 @@ const List = () => {
                 {user.username}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
-                {format(user.createdAt, 'MM/dd/yyyy')}
+                {format(new Date(user.createdAt), 'MM/dd/yyyy')}
               </TableCell>
               <TableCell className='table-cell' style={{ fontSize: '1.3rem' }}>
                 {user.country}
