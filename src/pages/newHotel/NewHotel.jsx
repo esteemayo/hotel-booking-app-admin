@@ -83,7 +83,7 @@ const NewHotel = () => {
       <div className='new-container'>
         <Navbar />
         <div className='top'>
-          <h1>Add new hotel</h1>
+          <h1>{slug ? 'Update hotel' : 'Add new hotel'}</h1>
         </div>
         <div className='bottom'>
           <div className='left'>
