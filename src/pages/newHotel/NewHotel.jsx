@@ -106,8 +106,8 @@ const NewHotel = () => {
                   type='file'
                   id='file'
                   multiple
-                  onChange={(e) => setFiles(e.target.files)}
                   style={{ display: 'none' }}
+                  onChange={(e) => setFiles(e.target.files)}
                 />
               </div>
               {hotelInputs.map((item) => {
