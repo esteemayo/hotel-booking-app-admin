@@ -57,11 +57,10 @@ const NewHotel = () => {
         photos: list,
       };
 
-      if (!slug) {
+      if (!hotelId) {
         await createHotel({ ...newHotel });
         navigate('/hotels');
       } else {
-        const hotelId = formData._id;
         await updateHotel(hotelId, newHotel);
         navigate(`/hotels/${hotelId}`);
       }
@@ -71,15 +70,15 @@ const NewHotel = () => {
   };
 
   useEffect(() => {
-    slug && (async () => {
+    hotelId && (async () => {
       try {
-        const { data } = await getHotelBySlug(slug);
+        const { data } = await getHotel(hotelId);
         setFormData({ ...data.hotel });
       } catch (err) {
         console.log(err);
       }
     })();
-  }, [slug]);
+  }, [hotelId]);
 
   return (
     <div className='new'>
@@ -87,11 +86,11 @@ const NewHotel = () => {
       <div className='new-container'>
         <Navbar />
         <div className='top'>
-          <h1>{slug ? 'Update hotel' : 'Add new hotel'}</h1>
+          <h1>{hotelId ? 'Update hotel' : 'Add new hotel'}</h1>
         </div>
         <div className='bottom'>
           <div className='left'>
-            {!slug ? (
+            {!hotelId ? (
               <img
                 src={
                   files
@@ -160,7 +159,7 @@ const NewHotel = () => {
                   )}
                 </select>
               </div>
-              <button type='submit'>{slug ? 'Update' : 'Send'}</button>
+              <button type='submit'>{hotelId ? 'Update' : 'Send'}</button>
             </form>
           </div>
         </div>
