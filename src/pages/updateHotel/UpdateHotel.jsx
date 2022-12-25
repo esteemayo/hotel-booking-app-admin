@@ -1,3 +1,3 @@
-import hotelFormComponent from '../newHotel/NewHotel';
+import HotelFormComponent from '../newHotel/NewHotel';
 
-export default hotelFormComponent;
+export default HotelFormComponent;
