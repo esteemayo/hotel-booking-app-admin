@@ -37,7 +37,7 @@ const SingleRoom = () => {
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Room Numbers:</span>
-                  <span className='item-value'>USA</span>
+                  <span className='item-value'>{state.roomNumbers.map((roomNumber) => roomNumber)}</span>
                 </div>
               </div>
             </div>
