@@ -7,7 +7,7 @@ import { hotelInputs } from 'formData';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
 import { uploadImage } from 'services/imageService';
-import { createHotel, getHotel, updateHotel } from 'services/hotelService';
+import * as hotelAPI from 'services/hotelService';
 
 import './newHotel.scss';
 
@@ -58,10 +58,10 @@ const NewHotel = () => {
       };
 
       if (!hotelId) {
-        await createHotel({ ...newHotel });
+        await hotelAPI.createHotel({ ...newHotel });
         navigate('/hotels');
       } else {
-        await updateHotel(hotelId, newHotel);
+        await hotelAPI.updateHotel(hotelId, newHotel);
         navigate(`/hotels/${hotelId}`);
       }
     } catch (err) {
@@ -72,7 +72,7 @@ const NewHotel = () => {
   useEffect(() => {
     hotelId && (async () => {
       try {
-        const { data } = await getHotel(hotelId);
+        const { data } = await hotelAPI.getHotel(hotelId);
         setFormData({ ...data.hotel });
       } catch (err) {
         console.log(err);
