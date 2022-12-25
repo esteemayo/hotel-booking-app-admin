@@ -16,7 +16,7 @@ const SingleHotel = () => {
         <div className='top'>
           <div className='left'>
             <div className='edit-button'>
-              <Link to={`/hotels/${state.slug}/update`} className='edit-link'>Edit</Link>
+              <Link to={`/hotels/${state._id}/update`} className='edit-link'>Edit</Link>
             </div>
             <h1 className='title'>Information</h1>
             <div className='item'>
