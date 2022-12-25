@@ -24,7 +24,7 @@ const SingleRoom = () => {
               <div className='details'>
                 <h1 className='item-title'>{state.title}</h1>
                 <div className='detail-item'>
-                  <span className='item-key'>Email:</span>
+                  <span className='item-key'>Price:</span>
                   <span className='item-value'>janedoe@gmail.com</span>
                 </div>
                 <div className='detail-item'>
