@@ -121,6 +121,14 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route
+                path=':roomId/update'
+                element={
+                  <ProtectedRoute>
+                    <RoomFormComponent />
+                  </ProtectedRoute>
+                }
+              />
             </Route>
             <Route path='*' element={<NotFound />} />
           </Route>
