@@ -7,7 +7,7 @@ import { hotelInputs } from 'formData';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
 import { uploadImage } from 'services/imageService';
-import { createHotel, getHotelBySlug } from 'services/hotelService';
+import { createHotel, getHotelBySlug, updateHotel } from 'services/hotelService';
 
 import './newHotel.scss';
 
