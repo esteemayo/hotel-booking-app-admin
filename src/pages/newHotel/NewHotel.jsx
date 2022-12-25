@@ -87,14 +87,25 @@ const NewHotel = () => {
         </div>
         <div className='bottom'>
           <div className='left'>
-            <img
-              src={
-                files
-                  ? URL.createObjectURL(files[0])
-                  : 'https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg'
-              }
-              alt=''
-            />
+            {!slug ? (
+              <img
+                src={
+                  files
+                    ? URL.createObjectURL(files[0])
+                    : 'https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg'
+                }
+                alt=''
+              />
+            ) : (
+              <img
+                src={
+                  files
+                    ? URL.createObjectURL(files[0])
+                    : formData.photos[0]
+                }
+                alt=''
+              />
+            )}
           </div>
           <div className='right'>
             <form onSubmit={handleSubmit}>
