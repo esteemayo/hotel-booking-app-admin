@@ -106,7 +106,7 @@ const NewHotel = () => {
                 src={
                   files
                     ? URL.createObjectURL(files[0])
-                    : formData.photos[0]
+                    : formData.photos && formData.photos[0]
                 }
                 alt=''
               />
