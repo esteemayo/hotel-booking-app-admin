@@ -144,7 +144,7 @@ const NewHotel = () => {
                   )}
                 </select>
               </div>
-              <button type='submit'>Send</button>
+              <button type='submit'>{slug ? 'Update' : 'Send'}</button>
             </form>
           </div>
         </div>
