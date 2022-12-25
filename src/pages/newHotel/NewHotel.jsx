@@ -71,7 +71,6 @@ const NewHotel = () => {
       try {
         const { data } = await getHotelBySlug(slug);
         setFormData({ ...data.hotel });
-        console.log(data)
       } catch (err) {
         console.log(err);
       }
