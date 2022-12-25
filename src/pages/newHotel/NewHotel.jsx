@@ -18,7 +18,7 @@ const NewHotel = () => {
 
   const [rooms, setRooms] = useState([]);
   const [files, setFiles] = useState(null);
-  const [formData, setFormData] = useState(null);
+  const [formData, setFormData] = useState({});
 
   const { data, loading } = useFetch('/rooms');
 
