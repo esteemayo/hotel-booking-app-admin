@@ -58,7 +58,14 @@ const NewHotel = () => {
         photos: list,
       };
 
-      await createHotel({ ...newHotel });
+      if (!slug) {
+        await createHotel({ ...newHotel });
+        navigate('/hotels');
+      } else {
+        const hotelId = formData._id;
+        await updateHotel(hotelId, newHotel);
+        navigate(`/hotels/${hotelId}`);
+      }
     } catch (err) {
       console.log(err);
     }
