@@ -14,6 +14,7 @@ import './newHotel.scss';
 const NewHotel = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const slug = pathname.split('/')[2];
 
   const [rooms, setRooms] = useState([]);
   const [files, setFiles] = useState(null);
