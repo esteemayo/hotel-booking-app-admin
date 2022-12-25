@@ -95,7 +95,7 @@ function App() {
                 }
               />
               <Route
-                path=':slug/update'
+                path=':hotelId/update'
                 element={
                   <ProtectedRoute>
                     <HotelFormComponent />
