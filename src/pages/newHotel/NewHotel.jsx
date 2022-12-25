@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
 
 import useFetch from 'hooks/useFetch';
