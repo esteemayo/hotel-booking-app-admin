@@ -36,7 +36,7 @@ const SingleRoom = () => {
                   <span className='item-value'>{state.desc}</span>
                 </div>
                 <div className='detail-item'>
-                  <span className='item-key'>Country:</span>
+                  <span className='item-key'>Room Numbers:</span>
                   <span className='item-value'>USA</span>
                 </div>
               </div>
