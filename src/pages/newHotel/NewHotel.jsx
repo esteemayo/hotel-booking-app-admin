@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
 
 import useFetch from 'hooks/useFetch';
@@ -13,6 +13,8 @@ import './newHotel.scss';
 
 const NewHotel = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
   const [rooms, setRooms] = useState([]);
   const [files, setFiles] = useState(null);
   const [formData, setFormData] = useState(null);
