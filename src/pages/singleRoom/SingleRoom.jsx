@@ -16,7 +16,9 @@ const SingleRoom = () => {
         <Navbar />
         <div className='top'>
           <div className='left'>
-            <div className='edit-button'>Edit</div>
+            <div className='edit-button'>
+              <Link to={`/rooms/${state._id}/update`} className='edit-link'>Edit</Link>
+            </div>
             <h1 className='title'>Information</h1>
             <div className='item'>
               <img
