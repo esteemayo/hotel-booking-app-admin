@@ -7,6 +7,7 @@ import NewHotel from './newHotel/NewHotel';
 import NewRoom from './newRoom/NewRoom';
 import NewUser from './newUser/NewUser';
 import NotFound from './notFound/NotFound';
+import RoomFormComponent from './updateRoom/UpdateRoom';
 import SharedLayout from './Layout/SharedLayout';
 import SingleHotel from './singleHotel/SingleHotel';
 import SingleRoom from './singleRoom/SingleRoom';
@@ -24,6 +25,7 @@ export {
   NewRoom,
   NewUser,
   NotFound,
+  RoomFormComponent,
   SharedLayout,
   SingleHotel,
   SingleRoom,
