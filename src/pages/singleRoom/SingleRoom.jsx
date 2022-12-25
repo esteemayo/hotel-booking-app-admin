@@ -32,7 +32,7 @@ const SingleRoom = () => {
                   <span className='item-value'>{state.maxPeople}</span>
                 </div>
                 <div className='detail-item'>
-                  <span className='item-key'>Address:</span>
+                  <span className='item-key'>Description:</span>
                   <span className='item-value'>
                     Elton St. 234 Garden Yd. NewYork
                   </span>
