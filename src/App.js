@@ -7,6 +7,7 @@ import { loginInputs, updateUserInputs, userInputs } from 'formData';
 import { useGlobalContext } from 'context/darkmode/DarkModeContext';
 import {
   Home,
+  HotelFormComponent,
   Layout,
   List,
   Login,
@@ -90,6 +91,14 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <NewHotel />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path=':hotelId/update'
+                element={
+                  <ProtectedRoute>
+                    <HotelFormComponent />
                   </ProtectedRoute>
                 }
               />
