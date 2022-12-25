@@ -7,7 +7,6 @@ import './singleRoom.scss';
 
 const SingleRoom = () => {
   const { state } = useLocation();
-  console.log(state)
 
   return (
     <div className='single'>
