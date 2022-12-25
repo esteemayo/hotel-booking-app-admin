@@ -120,6 +120,7 @@ const NewHotel = () => {
                       id={name}
                       name={name}
                       type={type}
+                      value={formData[id] || ''}
                       onChange={handleChange}
                       placeholder={placeholder}
                     />
