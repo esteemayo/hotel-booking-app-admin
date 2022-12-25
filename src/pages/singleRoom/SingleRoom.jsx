@@ -33,9 +33,7 @@ const SingleRoom = () => {
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Description:</span>
-                  <span className='item-value'>
-                    Elton St. 234 Garden Yd. NewYork
-                  </span>
+                  <span className='item-value'>{state.desc}</span>
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Country:</span>
