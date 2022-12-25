@@ -1,4 +1,5 @@
 import Home from './home/Home';
+import HotelFormComponent from './updateHotel/UpdateHotel';
 import Layout from './Layout/Layout';
 import List from './list/List';
 import Login from './login/Login';
@@ -15,6 +16,7 @@ import UpdateUser from './updateUser/UpdateUser';
 
 export {
   Home,
+  HotelFormComponent,
   Layout,
   List,
   Login,
