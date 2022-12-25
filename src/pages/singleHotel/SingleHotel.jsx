@@ -15,7 +15,9 @@ const SingleHotel = () => {
         <Navbar />
         <div className='top'>
           <div className='left'>
-            <div className='edit-button'>Edit</div>
+            <div className='edit-button'>
+              <Link to={`/hotels/${state.slug}/update`}>Edit</Link>
+            </div>
             <h1 className='title'>Information</h1>
             <div className='item'>
               <img
