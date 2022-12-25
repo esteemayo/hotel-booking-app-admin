@@ -66,6 +66,17 @@ const NewHotel = () => {
     }
   };
 
+  useEffect(() => {
+    slug && (async () => {
+      try {
+        const { data } = await getHotelBySlug(slug);
+        console.log(data)
+      } catch (err) {
+        console.log(err);
+      }
+    })();
+  }, [slug]);
+
   return (
     <div className='new'>
       <Sidebar />
