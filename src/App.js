@@ -15,6 +15,7 @@ import {
   NewRoom,
   NewUser,
   NotFound,
+  RoomFormComponent,
   SharedLayout,
   SingleHotel,
   SingleRoom,
