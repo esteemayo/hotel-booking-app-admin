@@ -36,9 +36,7 @@ const NewHotel = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     await handleCreate();
-    await navigate('/hotels');
   };
 
   const handleCreate = async () => {
