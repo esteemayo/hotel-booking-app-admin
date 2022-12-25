@@ -28,7 +28,7 @@ const SingleRoom = () => {
                   <span className='item-value'>{state.price}</span>
                 </div>
                 <div className='detail-item'>
-                  <span className='item-key'>Phone:</span>
+                  <span className='item-key'>Max people:</span>
                   <span className='item-value'>+1 2345 67 89</span>
                 </div>
                 <div className='detail-item'>
