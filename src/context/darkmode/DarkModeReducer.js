@@ -1,17 +1,17 @@
 import { DARK, LIGHT, TOGGLE } from './DarkModeTypes';
 
-const DarkModeReducer = (state, { type }) => {
+const DarkModeReducer = (state, { payload, type }) => {
   if (type === LIGHT) {
     return {
       ...state,
-      darkMode: false,
+      darkMode: payload,
     };
   }
 
   if (type === DARK) {
     return {
       ...state,
-      darkMode: true,
+      darkMode: payload,
     };
   }
 
