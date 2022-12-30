@@ -13,15 +13,21 @@ const DarkModeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(DarkModeReducer, INITIAL_STATE);
 
   const dark = () => {
-    dispatch({ type: DARK });
+    dispatch({
+      type: DARK,
+    });
   };
 
   const light = () => {
-    dispatch({ type: LIGHT });
+    dispatch({
+      type: LIGHT,
+    });
   };
 
   const toggle = () => {
-    dispatch({ type: TOGGLE });
+    dispatch({
+      type: TOGGLE,
+    });
   };
 
   return (
