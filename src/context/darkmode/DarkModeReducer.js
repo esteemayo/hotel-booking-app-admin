@@ -18,7 +18,7 @@ const DarkModeReducer = (state, { payload, type }) => {
   if (type === TOGGLE) {
     return {
       ...state,
-      darkMode: !state.darkMode,
+      darkMode: payload,
     };
   }
 
