@@ -57,8 +57,6 @@ const NewRoom = () => {
     })();
   }, [roomId]);
 
-  console.log(values.roomNumbers)
-
   return (
     <div className='new'>
       <Sidebar />
