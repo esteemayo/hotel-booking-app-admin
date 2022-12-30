@@ -28,7 +28,6 @@ const NewRoom = () => {
     e.preventDefault();
 
     await handleCreate();
-    await navigate('/rooms');
   };
 
   const handleCreate = async () => {
