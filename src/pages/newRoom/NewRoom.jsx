@@ -50,7 +50,6 @@ const NewRoom = () => {
       try {
         const { data } = await getRoom(roomId);
         setValues({ ...data.room });
-        console.log(data)
       } catch (err) {
         console.log(err);
       }
