@@ -51,10 +51,12 @@ const SingleHotel = () => {
                   <span className='item-key'>Description:</span>
                   <span className='item-value'>{state.desc}</span>
                 </div>
-                <div className='detail-item'>
-                  <span className='item-key'>Rating:</span>
-                  <span className='item-value'>{state.rating.toFixed(1)}</span>
-                </div>
+                {state.rating && (
+                  <div className='detail-item'>
+                    <span className='item-key'>Rating:</span>
+                    <span className='item-value'>{state.rating.toFixed(1)}</span>
+                  </div>
+                )}
               </div>
             </div>
           </div>
