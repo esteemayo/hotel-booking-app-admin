@@ -14,7 +14,7 @@ const DarkModeReducer = (state, { payload, type }) => {
         darkMode: payload,
       };
 
-    case TOGGLE:
+    case actions.TOGGLE:
       return {
         ...state,
         darkMode: payload,
