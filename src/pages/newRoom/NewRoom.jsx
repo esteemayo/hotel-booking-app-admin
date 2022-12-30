@@ -5,7 +5,7 @@ import { roomInputs } from 'formData';
 import useFetch from 'hooks/useFetch';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
-import { createRoom, getRoom, updateRoom } from 'services/roomService';
+import * as roomAPI from 'services/roomService';
 
 import './newRoom.scss';
 
@@ -38,10 +38,10 @@ const NewRoom = () => {
 
     try {
       if (roomId) {
-        await updateRoom(roomId, newRoom);
+        await roomAPI.updateRoom(roomId, newRoom);
         navigate(`/rooms/${roomId}`);
       } else {
-        await createRoom(hotelId, newRoom);
+        await roomAPI.createRoom(hotelId, newRoom);
         navigate('/rooms');
       }
     } catch (err) {
@@ -52,7 +52,7 @@ const NewRoom = () => {
   useEffect(() => {
     roomId && (async () => {
       try {
-        const { data } = await getRoom(roomId);
+        const { data } = await roomAPI.getRoom(roomId);
         setValues({ ...data.room });
       } catch (err) {
         console.log(err);
