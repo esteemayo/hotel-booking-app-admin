@@ -39,7 +39,7 @@ const NewRoom = () => {
     try {
       if (roomId) {
         await roomAPI.updateRoom(roomId, newRoom);
-        navigate(`/rooms/${roomId}`);
+        navigate(-1);
       } else {
         await roomAPI.createRoom(hotelId, newRoom);
         navigate('/rooms');
