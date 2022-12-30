@@ -16,7 +16,7 @@ const DarkModeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(DarkModeReducer, INITIAL_STATE);
 
   const dark = (option) => {
-    setToStorage('darkMode', option);
+    setToStorage(darkModeKey, option);
     dispatch({
       type: actions.DARK,
       payload: option,
