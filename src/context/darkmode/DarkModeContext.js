@@ -10,7 +10,7 @@ const INITIAL_STATE = {
   darkMode: darkMode ?? 'light',
 };
 
-const DarkModeContext = createContext();
+const DarkModeContext = createContext(INITIAL_STATE);
 
 const DarkModeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(DarkModeReducer, INITIAL_STATE);
