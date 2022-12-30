@@ -57,6 +57,8 @@ const NewRoom = () => {
     })();
   }, [roomId]);
 
+  console.log(values.roomNumbers)
+
   return (
     <div className='new'>
       <Sidebar />
@@ -87,7 +89,7 @@ const NewRoom = () => {
               <div className='form-input'>
                 <label htmlFor='rooms'>Rooms</label>
                 <textarea
-                  value={values.rooms}
+                  value={values?.roomNumbers?.map((room) => room.number)}
                   onChange={(e) => setRooms(e.target.value)}
                   placeholder='give comma between room numbers.'
                 ></textarea>
