@@ -92,7 +92,7 @@ const NewRoom = () => {
                 <textarea
                   onChange={(e) => setRooms(e.target.value)}
                   placeholder='give comma between room numbers.'
-                  value={values?.roomNumbers?.map((room) => room.number)}
+                  value={values?.roomNumbers?.map((room) => room.number) || ''}
                 ></textarea>
               </div>
               <div className='form-input'>
