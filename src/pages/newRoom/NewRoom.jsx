@@ -54,6 +54,7 @@ const NewRoom = () => {
       try {
         const { data } = await roomAPI.getRoom(roomId);
         setValues({ ...data.room });
+        setRooms(data.room.roomNumbers.map((room) => room.number));
       } catch (err) {
         console.log(err);
       }
@@ -92,7 +93,7 @@ const NewRoom = () => {
                 <textarea
                   onChange={(e) => setRooms(e.target.value)}
                   placeholder='give comma between room numbers.'
-                  value={values?.roomNumbers?.map((room) => room.number) || ''}
+                  value={rooms || ''}
                 ></textarea>
               </div>
               <div className='form-input'>
