@@ -5,7 +5,7 @@ import { roomInputs } from 'formData';
 import useFetch from 'hooks/useFetch';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
-import { createRoom, getRoom } from 'services/roomService';
+import { createRoom, getRoom, updateRoom } from 'services/roomService';
 
 import './newRoom.scss';
 
@@ -39,6 +39,9 @@ const NewRoom = () => {
     };
 
     try {
+      if (roomId) {
+        await updateRoom(roomId, newRoom);
+      }
       await createRoom(hotelId, newRoom);
     } catch (err) {
       console.log(err);
