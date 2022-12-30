@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { roomInputs } from 'formData';
 import useFetch from 'hooks/useFetch';
@@ -11,6 +11,8 @@ import './newRoom.scss';
 
 const NewRoom = () => {
   const navigate = useNavigate();
+  const { roomId } = useParams();
+
   const [rooms, setRooms] = useState([]);
   const [values, setValues] = useState(null);
   const [hotelId, setHotelId] = useState(null);
