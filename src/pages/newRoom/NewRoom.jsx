@@ -63,7 +63,7 @@ const NewRoom = () => {
       <div className='new-container'>
         <Navbar />
         <div className='top'>
-          <h1>Add new room</h1>
+          <h1>{roomId ? 'Update room' : 'Add new room'}</h1>
         </div>
         <div className='bottom'>
           <div className='right'>
