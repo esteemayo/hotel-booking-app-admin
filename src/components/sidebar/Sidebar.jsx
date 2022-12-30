@@ -103,8 +103,8 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className='bottom'>
-        <div className='color-options' onClick={light}></div>
-        <div className='color-options' onClick={dark}></div>
+        <div className='color-options' onClick={() => light('light')}></div>
+        <div className='color-options' onClick={() => dark('dark')}></div>
       </div>
     </div>
   );
