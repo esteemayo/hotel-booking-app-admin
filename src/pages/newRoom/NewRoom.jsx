@@ -90,9 +90,9 @@ const NewRoom = () => {
               <div className='form-input'>
                 <label htmlFor='rooms'>Rooms</label>
                 <textarea
-                  value={values?.roomNumbers?.map((room) => room.number)}
                   onChange={(e) => setRooms(e.target.value)}
                   placeholder='give comma between room numbers.'
+                  value={values?.roomNumbers?.map((room) => room.number)}
                 ></textarea>
               </div>
               <div className='form-input'>
