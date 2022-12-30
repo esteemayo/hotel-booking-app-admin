@@ -32,8 +32,8 @@ const SingleUser = () => {
     (async () => {
       try {
         const { data } = await getUserStats();
-        console.log(data);
         const statLists = data.stats.sort((a, b) => a._id - b._id);
+
         statLists.map((item) =>
           setUserStats((prev) =>
             [...prev, { name: MONTHS[item._id - 1], 'Active User': item.total }]
