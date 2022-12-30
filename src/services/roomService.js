@@ -11,4 +11,7 @@ export const getRoom = (roomId) => http.get(roomUrl(roomId));
 export const createRoom = (hotelId, room) =>
   http.post(`${apiEndpoint}/${hotelId}`, room);
 
+export const updateRoom = (roomId, room) =>
+  http.patch(roomUrl(roomId), room);
+
 export const deleteRoom = (roomId) => http.delete(roomUrl(roomId));
