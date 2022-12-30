@@ -12,6 +12,38 @@ import './singleUser.scss';
 
 const SingleUser = () => {
   const { state } = useLocation();
+  const [userStats, setUserStats] = useState([]);
+
+  const MONTHS = useMemo(() => [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ], []);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const { data } = await getUserStats();
+        console.log(data);
+        const statLists = data.stats.sort((a, b) => a._id - b._id);
+        statLists.map((item) =>
+          setUserStats((prev) =>
+            [...prev, { name: MONTHS[item._id - 1], 'Active User': item.total }]
+          ));
+      } catch (err) {
+        console.log(err);
+      }
+    })();
+  }, [MONTHS]);
 
   return (
     <div className='single'>
