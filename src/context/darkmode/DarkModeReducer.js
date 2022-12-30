@@ -8,7 +8,7 @@ const DarkModeReducer = (state, { payload, type }) => {
         darkMode: payload,
       };
 
-    case DARK:
+    case actions.DARK:
       return {
         ...state,
         darkMode: payload,
