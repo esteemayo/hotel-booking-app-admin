@@ -87,6 +87,7 @@ const NewRoom = () => {
               <div className='form-input'>
                 <label htmlFor='rooms'>Rooms</label>
                 <textarea
+                  value={values.rooms}
                   onChange={(e) => setRooms(e.target.value)}
                   placeholder='give comma between room numbers.'
                 ></textarea>
