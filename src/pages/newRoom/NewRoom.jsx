@@ -26,7 +26,6 @@ const NewRoom = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     await handleCreate();
   };
 
