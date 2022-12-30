@@ -34,7 +34,7 @@ const DarkModeProvider = ({ children }) => {
   const toggle = (option) => {
     setToStorage('darkMode', option);
     dispatch({
-      type: TOGGLE,
+      type: actions.TOGGLE,
       payload: option,
     });
   };
