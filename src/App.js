@@ -29,7 +29,7 @@ function App() {
   const { darkMode } = useGlobalContext();
 
   return (
-    <div className={darkMode ? 'app dark' : 'app'}>
+    <div className={darkMode === 'dark' ? 'app dark' : 'app'}>
       <Router>
         <Routes>
           <Route path='/' element={<SharedLayout />}>
