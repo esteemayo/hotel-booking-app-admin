@@ -40,8 +40,11 @@ const NewRoom = () => {
     try {
       if (roomId) {
         await updateRoom(roomId, newRoom);
+        navigate(`/rooms/${roomId}`);
+      } else {
+        await createRoom(hotelId, newRoom);
+        navigate('/rooms');
       }
-      await createRoom(hotelId, newRoom);
     } catch (err) {
       console.log(err);
     }
