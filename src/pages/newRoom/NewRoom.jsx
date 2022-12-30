@@ -77,6 +77,7 @@ const NewRoom = () => {
                       id={name}
                       name={name}
                       type={type}
+                      value={values[id]}
                       onChange={handleChange}
                       placeholder={placeholder}
                     />
