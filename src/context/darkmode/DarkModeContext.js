@@ -15,15 +15,19 @@ const DarkModeContext = createContext();
 const DarkModeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(DarkModeReducer, INITIAL_STATE);
 
-  const dark = () => {
+  const dark = (option) => {
+    setToStorage('darkMode', 'dark');
     dispatch({
       type: DARK,
+      payload: option,
     });
   };
 
-  const light = () => {
+  const light = (option) => {
+    setToStorage('darkMode', 'light');
     dispatch({
       type: LIGHT,
+      payload: option,
     });
   };
 
