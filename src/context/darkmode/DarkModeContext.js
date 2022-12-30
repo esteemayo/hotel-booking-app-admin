@@ -18,7 +18,7 @@ const DarkModeProvider = ({ children }) => {
   const dark = (option) => {
     setToStorage('darkMode', option);
     dispatch({
-      type: DARK,
+      type: actions.DARK,
       payload: option,
     });
   };
