@@ -16,7 +16,7 @@ const DarkModeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(DarkModeReducer, INITIAL_STATE);
 
   const dark = (option) => {
-    setToStorage('darkMode', 'dark');
+    setToStorage('darkMode', option);
     dispatch({
       type: DARK,
       payload: option,
@@ -24,16 +24,18 @@ const DarkModeProvider = ({ children }) => {
   };
 
   const light = (option) => {
-    setToStorage('darkMode', 'light');
+    setToStorage('darkMode', option);
     dispatch({
       type: LIGHT,
       payload: option,
     });
   };
 
-  const toggle = () => {
+  const toggle = (option) => {
+    setToStorage('darkMode', option);
     dispatch({
       type: TOGGLE,
+      payload: option,
     });
   };
 
