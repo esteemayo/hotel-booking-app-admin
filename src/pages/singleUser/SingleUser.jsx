@@ -52,7 +52,7 @@ const SingleUser = () => {
           <div className='right'>
             <Chart
               data={data}
-              dataKey='Total'
+              dataKey='Active User'
               aspect={3 / 1}
               title='User Spending (Last 6 Months)'
             />
