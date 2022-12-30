@@ -4,8 +4,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { roomInputs } from 'formData';
 import useFetch from 'hooks/useFetch';
 import Navbar from 'components/navbar/Navbar';
-import Sidebar from 'components/sidebar/Sidebar';
 import * as roomAPI from 'services/roomService';
+import Sidebar from 'components/sidebar/Sidebar';
 
 import './newRoom.scss';
 
