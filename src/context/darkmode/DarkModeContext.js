@@ -1,5 +1,6 @@
 import { createContext, useContext, useReducer } from 'react';
 
+import { setToStorage } from 'utils';
 import DarkModeReducer from './DarkModeReducer';
 import { DARK, LIGHT, TOGGLE } from './DarkModeTypes';
 
