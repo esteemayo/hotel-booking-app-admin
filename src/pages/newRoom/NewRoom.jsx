@@ -46,8 +46,15 @@ const NewRoom = () => {
   };
 
   useEffect(() => {
-    // 
-  })
+    roomId && (async () => {
+      try {
+        const { data } = await getRoom(roomId);
+        console.log(data)
+      } catch (err) {
+        console.log(err);
+      }
+    })();
+  }, [roomId]);
 
   return (
     <div className='new'>
