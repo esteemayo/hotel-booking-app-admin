@@ -2,7 +2,7 @@ import { createContext, useContext, useReducer } from 'react';
 
 import * as actions from './DarkModeTypes';
 import DarkModeReducer from './DarkModeReducer';
-import { getFromStorage, setToStorage } from 'utils';
+import { darkModeKey, getFromStorage, setToStorage } from 'utils';
 
 const darkMode = getFromStorage('darkMode');
 
