@@ -108,7 +108,7 @@ const NewRoom = () => {
                 </select>
               </div>
               <div className='form-input'>
-                <button type='submit'>Send</button>
+                <button type='submit'>{roomId ? 'Update' : 'Send'}</button>
               </div>
             </form>
           </div>
