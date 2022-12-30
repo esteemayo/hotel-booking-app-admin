@@ -1,4 +1,4 @@
-import { DARK, LIGHT, TOGGLE } from './DarkModeTypes';
+import * as actions from './DarkModeTypes';
 
 const DarkModeReducer = (state, { payload, type }) => {
   switch (type) {
