@@ -14,7 +14,7 @@ const NewRoom = () => {
   const { roomId } = useParams();
 
   const [rooms, setRooms] = useState([]);
-  const [values, setValues] = useState(null);
+  const [values, setValues] = useState({});
   const [hotelId, setHotelId] = useState(null);
 
   const { data, loading } = useFetch('/hotels');
@@ -44,6 +44,10 @@ const NewRoom = () => {
       console.log(err);
     }
   };
+
+  useEffect(() => {
+    // 
+  })
 
   return (
     <div className='new'>
