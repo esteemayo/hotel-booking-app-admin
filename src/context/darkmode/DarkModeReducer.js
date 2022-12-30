@@ -2,7 +2,7 @@ import * as actions from './DarkModeTypes';
 
 const DarkModeReducer = (state, { payload, type }) => {
   switch (type) {
-    case LIGHT:
+    case actions.LIGHT:
       return {
         ...state,
         darkMode: payload,
