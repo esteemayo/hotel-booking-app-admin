@@ -85,10 +85,10 @@ const SingleUser = () => {
           </div>
           <div className='right'>
             <Chart
-              data={data}
+              data={userStats}
               dataKey='Active User'
               aspect={3 / 1}
-              title='User Spending (Last 6 Months)'
+              title='User Statistics'
             />
           </div>
         </div>
