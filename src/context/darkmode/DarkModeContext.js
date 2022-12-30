@@ -1,5 +1,6 @@
 import { createContext, useContext, useReducer } from 'react';
 
+import * as actions from './DarkModeTypes';
 import DarkModeReducer from './DarkModeReducer';
 import { getFromStorage, setToStorage } from 'utils';
 import * as actions from './DarkModeTypes';
