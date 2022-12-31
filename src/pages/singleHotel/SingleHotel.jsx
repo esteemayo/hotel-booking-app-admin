@@ -58,7 +58,7 @@ const SingleHotel = () => {
                       value={state.distance}
                       displayType={'text'}
                       thousandSeparator={true}
-                      suffix={'km'}
+                      suffix={'m'}
                     />
                   </span>
                 </div>
