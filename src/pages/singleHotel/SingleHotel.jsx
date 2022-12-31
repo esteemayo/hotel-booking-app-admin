@@ -38,7 +38,14 @@ const SingleHotel = () => {
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Price:</span>
-                  <span className='item-value'>{state.cheapestPrice}</span>
+                  <span className='item-value'>
+                    <NumericFormat
+                      value={state.cheapestPrice}
+                      displayType={'text'}
+                      thousandSeparator={true}
+                      prefix={'$'}
+                    />
+                  </span>
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Address:</span>
