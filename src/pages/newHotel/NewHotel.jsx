@@ -62,7 +62,7 @@ const NewHotel = () => {
         navigate('/hotels');
       } else {
         await hotelAPI.updateHotel(hotelId, newHotel);
-        navigate(`/hotels/${hotelId}`);
+        navigate(-2);
       }
     } catch (err) {
       console.log(err);
