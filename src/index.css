@@ -42,6 +42,9 @@ html {
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-color: rgba(5, 5, 5, 0.35);
+  scrollbar-width: thin;
 }
 
 body {
