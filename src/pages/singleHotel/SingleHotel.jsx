@@ -23,7 +23,7 @@ const SingleHotel = () => {
             <div className='item'>
               <img
                 src={state.photos[0]}
-                alt={state.name}
+                alt=''
                 className='item-img'
               />
               <div className='details'>
