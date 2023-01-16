@@ -58,7 +58,7 @@ const SingleUser = () => {
             <div className='item'>
               <img
                 src={state.img ?? 'https://i.ibb.co/MBtjqXQ/no-avatar.gif'}
-                alt='avatar'
+                alt=''
                 className='item-img'
               />
               <div className='details'>
