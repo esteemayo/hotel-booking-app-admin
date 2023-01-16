@@ -55,7 +55,7 @@ const List = () => {
                 <div className='cell-wrapper'>
                   <img
                     src={user.img ?? 'https://i.ibb.co/MBtjqXQ/no-avatar.gif'}
-                    alt={user.username}
+                    alt=''
                     className='image'
                   />
                   {user.name}
