@@ -10,7 +10,7 @@ const NotFound = () => {
       <div className='notfound-container'>
         <Navbar />
         <div className='img-wrapper'>
-          <img src='assets/img/404.png' alt='404' />
+          <img src='assets/img/404.png' alt='' />
         </div>
       </div>
     </div>
