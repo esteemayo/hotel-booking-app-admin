@@ -23,7 +23,7 @@ export const userColumns = [
           <img
             className='cell-img'
             src={params.row.img || 'https://i.ibb.co/MBtjqXQ/no-avatar.gif'}
-            alt='avatar'
+            alt=''
           />
           {params.row.username}
         </div>
