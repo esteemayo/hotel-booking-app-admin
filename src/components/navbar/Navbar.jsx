@@ -54,7 +54,7 @@ const Navbar = () => {
           <div className='item'>
             <img
               src={user?.img ?? 'https://i.ibb.co/MBtjqXQ/no-avatar.gif'}
-              alt='avatar'
+              alt=''
               className='avatar'
             />
           </div>
