@@ -25,7 +25,14 @@ const SingleRoom = () => {
                 <h1 className='item-title'>{state.title}</h1>
                 <div className='detail-item'>
                   <span className='item-key'>Price:</span>
-                  <span className='item-value'>{state.price}</span>
+                  <span className='item-value'>
+                    <NumericFormat
+                      value={state.price}
+                      displayType={'text'}
+                      thousandSeparator={true}
+                      prefix={'$'}
+                    />
+                  </span>
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Max People:</span>
