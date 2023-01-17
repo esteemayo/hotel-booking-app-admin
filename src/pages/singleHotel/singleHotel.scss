@@ -76,10 +76,12 @@
 
                 .btn-desc {
                   border: none;
+                  outline: none;
                   display: inline-block;
                   text-transform: capitalize;
                   background-color: transparent;
                   color: #7451f8;
+                  cursor: pointer;
                 }
               }
             }
