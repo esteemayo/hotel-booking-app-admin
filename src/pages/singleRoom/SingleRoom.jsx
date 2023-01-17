@@ -1,3 +1,4 @@
+import { NumericFormat } from 'react-number-format';
 import { Link, useLocation } from 'react-router-dom';
 
 import Navbar from 'components/navbar/Navbar';
