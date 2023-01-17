@@ -28,7 +28,7 @@ const DataTable = ({ columns }) => {
             break;
 
           case 'rooms':
-            const roomRes = await getRooms()
+            const roomRes = await getRooms();
             setData(roomRes.data.rooms);
             break;
 
