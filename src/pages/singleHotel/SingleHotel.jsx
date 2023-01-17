@@ -69,7 +69,7 @@ const SingleHotel = () => {
                   <span className='item-key'>Description:</span>
                   <span className='item-value'>
                     {readMore ? state.desc : excerpts(state?.desc, 20)}
-                    <button onClick={() => setReadMore(!readMore)}>
+                    <button className='btn-desc' onClick={() => setReadMore(!readMore)}>
                       {readMore ? 'show less' : 'read more'}
                     </button>
                   </span>
