@@ -9,6 +9,7 @@ import './singleHotel.scss';
 
 const SingleHotel = () => {
   const { state } = useLocation();
+  const [readMore, setReadMore] = useState(false);
 
   return (
     <div className='single'>
