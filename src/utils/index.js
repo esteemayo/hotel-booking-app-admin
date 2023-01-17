@@ -13,3 +13,10 @@ export const setToStorage = (key, value) => {
 export const clearFromStorage = () => {
   return localStorage.clear();
 };
+
+export const excerpts = (str, count) => {
+  if (str.length > count) {
+    str = `${str.split(' ').splice(0, count).join(' ')} ...`;
+  }
+  return str;
+};
