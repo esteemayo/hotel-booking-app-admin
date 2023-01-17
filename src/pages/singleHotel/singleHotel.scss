@@ -73,6 +73,13 @@
 
               .item-value {
                 font-weight: 300;
+
+                .btn-desc {
+                  border: none;
+                  display: inline-block;
+                  background-color: transparent;
+                  color: #7451f8;
+                }
               }
             }
           }
