@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NumericFormat } from 'react-number-format';
 import { Link, useLocation } from 'react-router-dom';
 
+import { excerpts } from 'utils';
 import Navbar from 'components/navbar/Navbar';
 import Sidebar from 'components/sidebar/Sidebar';
 
