@@ -67,7 +67,10 @@ const SingleHotel = () => {
                 </div>
                 <div className='detail-item'>
                   <span className='item-key'>Description:</span>
-                  <span className='item-value'>{state.desc}</span>
+                  <span className='item-value'>
+                    {readMore ? state.desc : excerpts(state?.desc, 20)}
+                    <button onClick={() => setReadMore(!readMore)}>{readMore ? 'show less' : 'read more'}</button>
+                  </span>
                 </div>
                 {state.rating && (
                   <div className='detail-item'>
