@@ -24,11 +24,13 @@ const SingleHotel = () => {
             </div>
             <h1 className='title'>Information</h1>
             <div className='item'>
-              <img
-                src={state.photos[0]}
-                alt=''
-                className='item-img'
-              />
+              <div className='img-container'>
+                <img
+                  src={state.photos[0]}
+                  alt=''
+                  className='item-img'
+                />
+              </div>
               <div className='details'>
                 <h1 className='item-title'>{state.name}</h1>
                 <div className='detail-item'>
