@@ -32,7 +32,7 @@ const Navbar = () => {
           </div>
           <div className='item'>
             {darkMode === 'dark' ? (
-              <LightModeOutlined className='icon' onClick={() => toggle('dark')} />
+              <LightModeOutlined className='icon' onClick={() => toggle('light')} />
             ) : (
               <DarkModeOutlined className='icon' onClick={() => toggle('light')} />
             )}
