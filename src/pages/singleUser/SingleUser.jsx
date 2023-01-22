@@ -13,20 +13,23 @@ const SingleUser = () => {
   const { state } = useLocation();
   const [userStats, setUserStats] = useState([]);
 
-  const MONTHS = useMemo(() => [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ], []);
+  const MONTHS = useMemo(
+    () => [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ],
+    []
+  );
 
   useEffect(() => {
     (async () => {
