@@ -112,4 +112,25 @@
     background-color: transparent;
     color: gray;
   }
+
+  .login {
+    &__input {
+      outline-color: var(--color-gray-dark);
+      caret-color: rgb(156, 156, 156);
+
+      &::placeholder {
+        color: rgb(156, 156, 156);
+      }
+    }
+
+    &__button {
+      background-color: #414040;
+      color: #ccc;
+      outline-color: var(--color-gray-dark);
+
+      &:disabled {
+        background-color: #2e2d2dda;
+      }
+    }
+  }
 }
