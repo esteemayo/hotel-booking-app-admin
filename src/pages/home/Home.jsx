@@ -13,8 +13,8 @@ import './home.scss';
 const Home = () => {
   const [userStats, setUserStats] = useState([]);
 
-  const MONTHS = useMemo(() =>
-    [
+  const MONTHS = useMemo(
+    () => [
       'Jan',
       'Feb',
       'Mar',
@@ -28,7 +28,8 @@ const Home = () => {
       'Nov',
       'Dec'
     ],
-    []);
+    []
+  );
 
   useEffect(() => {
     (async () => {
