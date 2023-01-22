@@ -7,7 +7,7 @@ import { darkModeKey, getFromStorage, setToStorage } from 'utils';
 const darkMode = getFromStorage(darkModeKey);
 
 const INITIAL_STATE = {
-  darkMode: darkMode ?? 'light',
+  darkMode: darkMode ?? 'dark',
 };
 
 const DarkModeContext = createContext(INITIAL_STATE);
