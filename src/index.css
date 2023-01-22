@@ -70,3 +70,21 @@ body {
   font-size: 3rem;
   color: var(--color-gray-dark);
 }
+
+.css-i4bv87-MuiSvgIcon-root {
+  color: rgb(156, 156, 156);
+}
+
+.css-ptiqhd-MuiSvgIcon-root {
+  color: rgb(156, 156, 156);
+}
+
+.css-imf0nl-MuiDataGrid-root
+  .MuiDataGrid-columnHeader:not(.MuiDataGrid-columnHeader--sorted)
+  .MuiDataGrid-sortIcon {
+  color: rgb(156, 156, 156);
+}
+
+.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar {
+  color: rgb(156, 156, 156);
+}
